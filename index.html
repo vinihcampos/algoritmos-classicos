@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Sipex 2016 - Algorítmos Clássicos</title>
+
+        <!-- Bootstrap -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+       <link rel="stylesheet" href="css/style.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link href='https://fonts.googleapis.com/css?family=Lobster|Maven+Pro|Dancing+Script|Bangers|Lobster+Two|Bad+Script|Poiret+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <body class="container-fluid">
+        <nav class = "row text-center">
+            <h2>SIPEX 2016 - ALGORITMOS CLÁSSICOS</h2>
+        </nav>
+        <section class = "row text-center"> 
+            <div class = "col-sm-4 cpp">
+                <h1>Introdução a C++</h1>
+            </div>
+            <div class = "col-sm-4 bb">
+                <h1>Busca Binária</h1>
+            </div>
+            <div class = "col-sm-4 kadane">
+                <h1>Algoritmo de Kadane</h1>
+            </div>
+            <div class = "col-sm-4 back">
+                <h1>Backtracking</h1>
+            </div>
+            <div class = "col-sm-4 greedy">
+                <h1>Algoritmos Gulosos</h1>
+            </div>
+            <div class = "col-sm-4 grafos">
+                <h1>Grafos</h1>
+            </div>
+        </section>
+
+         <script>
+            var size;
+            $( document ).ready(function() {
+                size = $(".col-sm-4").css("width");
+            });           
+            $( ".col-sm-4.cpp" ).on({"mouseenter":function() {
+                $( ".bb" ).css( "width", "25%" );
+                $( ".kadane" ).css( "width", "25%" );
+                $( this ).css( "width", "50%" );},
+                "mouseleave":function() {
+                    $( ".col-sm-4.bb" ).css( "width", size );
+                    $( ".col-sm-4.kadane" ).css( "width", size );
+                    $( ".col-sm-4.cpp" ).css( "width", size );
+                    $( ".col-sm-4.greedy" ).css( "width", size );
+                    $( ".col-sm-4.grafos" ).css( "width", size );
+                    $( ".col-sm-4.back" ).css( "width", size );
+                }
+            });
+            $( ".col-sm-4.bb" ).on({"mouseenter":function() {
+                $( ".cpp" ).css( "width", "25%" );
+                $( ".kadane" ).css( "width", "25%" );
+                $( this ).css( "width", "50%" );},
+                "mouseleave":function() {
+                    $( ".col-sm-4.bb" ).css( "width", size );
+                    $( ".col-sm-4.kadane" ).css( "width", size );
+                    $( ".col-sm-4.cpp" ).css( "width", size );
+                    $( ".col-sm-4.greedy" ).css( "width", size );
+                    $( ".col-sm-4.grafos" ).css( "width", size );
+                    $( ".col-sm-4.back" ).css( "width", size );
+                }                
+            });
+            $( ".col-sm-4.kadane" ).on({"mouseenter":function() {
+                $( ".bb" ).css( "width", "25%" );
+                $( ".cpp" ).css( "width", "25%" );
+                $( this ).css( "width", "50%" );},
+                "mouseleave":function() {
+                    $( ".col-sm-4.bb" ).css( "width", size );
+                    $( ".col-sm-4.kadane" ).css( "width", size );
+                    $( ".col-sm-4.cpp" ).css( "width", size );
+                    $( ".col-sm-4.greedy" ).css( "width", size );
+                    $( ".col-sm-4.grafos" ).css( "width", size );
+                    $( ".col-sm-4.back" ).css( "width", size );
+                }             
+            });
+            $( ".col-sm-4.back" ).on({"mouseenter":function() {
+                $( ".greedy" ).css( "width", "25%" );
+                $( ".grafos" ).css( "width", "25%" );
+                $( this ).css( "width", "50%" );},
+                "mouseleave":function() {
+                   $( ".col-sm-4.bb" ).css( "width", size );
+                   $( ".col-sm-4.kadane" ).css( "width", size );
+                   $( ".col-sm-4.cpp" ).css( "width", size );
+                   $( ".col-sm-4.greedy" ).css( "width", size );
+                   $( ".col-sm-4.grafos" ).css( "width", size );
+                   $( ".col-sm-4.back" ).css( "width", size );
+                }
+            });
+            $( ".col-sm-4.greedy" ).on({"mouseenter":function() {
+                $( ".back" ).css( "width", "25%" );
+                $( ".grafos" ).css( "width", "25%" );
+                $( this ).css( "width", "50%" );},
+                "mouseleave":function() {
+                    $( ".col-sm-4.bb" ).css( "width", size );
+                    $( ".col-sm-4.kadane" ).css( "width", size );
+                    $( ".col-sm-4.cpp" ).css( "width", size );
+                    $( ".col-sm-4.greedy" ).css( "width", size );
+                    $( ".col-sm-4.grafos" ).css( "width", size );
+                    $( ".col-sm-4.back" ).css( "width", size );
+                }
+            });
+            $( ".col-sm-4.grafos" ).on({"mouseenter":function() {
+                $( ".greedy" ).css( "width", "25%" );
+                $( ".back" ).css( "width", "25%" );
+                $( this ).css( "width", "50%" );},
+                "mouseleave":function() {
+                    $( ".col-sm-4.bb" ).css( "width", size );
+                    $( ".col-sm-4.kadane" ).css( "width", size );
+                    $( ".col-sm-4.cpp" ).css( "width", size );
+                    $( ".col-sm-4.greedy" ).css( "width", size );
+                    $( ".col-sm-4.grafos" ).css( "width", size );
+                    $( ".col-sm-4.back" ).css( "width", size );
+                }
+            });
+        </script>     
+    </body>
+</html>

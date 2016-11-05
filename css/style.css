@@ -1,0 +1,65 @@
+html,body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+nav{
+	margin: 0;
+	padding: 0;
+	height: 10%;
+	color: #898989;
+	background: #f3f3f3;
+}
+
+section{
+	margin: 0;
+	padding: 0;
+	height: 90%;
+}
+
+h1{
+	font-family: 'Bangers';
+	color: #FFF;
+}
+
+h2{
+	margin-top: 1%;
+	font-family: 'Poiret One';
+	font-weight: bold;
+}
+
+.col-sm-4{
+	padding-top: 8%;
+	height: 50%;
+
+	-o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;	
+}
+
+.cpp{
+	background: #7B1FA2;
+}
+
+.bb{
+	background: #E64A19;
+}
+
+.kadane{
+	background: #00796B;
+}
+
+.back{
+	background: #0097A7;
+}
+
+.greedy{
+	background: #FFA000;
+}
+
+.grafos{
+	background: #455A64;
+}
+
