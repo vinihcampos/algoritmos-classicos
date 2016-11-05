@@ -7,9 +7,11 @@ html,body {
 nav{
 	margin: 0;
 	padding: 0;
-	height: 10%;
+	height: auto;
+	min-height: 10%;
 	color: #898989;
 	background: #f3f3f3;
+	display: block;
 }
 
 section{
@@ -29,14 +31,17 @@ h2{
 	font-weight: bold;
 }
 
-.col-sm-4{
+.subject{
+
+}
+
+.col-sm-6, .col-sm-4, .col-sm-3{
 	padding-top: 8%;
 	height: 50%;
-
-	-o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;	
+	-o-transition:.3s;
+    -ms-transition:.3s;
+    -moz-transition:.1s;
+    -webkit-transition:.3s;
 }
 
 .cpp{

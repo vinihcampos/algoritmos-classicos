@@ -32,108 +32,106 @@
             <h2>SIPEX 2016 - ALGORITMOS CLÁSSICOS</h2>
         </nav>
         <section class = "row text-center"> 
-            <div class = "col-sm-4 cpp">
+            <div class = "subject col-sm-4 col-xs-12 cpp">
                 <h1>Introdução a C++</h1>
             </div>
-            <div class = "col-sm-4 bb">
+            <div class = "subject col-sm-4 col-xs-12 bb">
                 <h1>Busca Binária</h1>
             </div>
-            <div class = "col-sm-4 kadane">
+            <div class = "subject col-sm-4 col-xs-12 kadane">
                 <h1>Algoritmo de Kadane</h1>
             </div>
-            <div class = "col-sm-4 back">
+            <div class = "subject col-sm-4 col-xs-12 back">
                 <h1>Backtracking</h1>
             </div>
-            <div class = "col-sm-4 greedy">
+            <div class = "subject col-sm-4 col-xs-12 greedy">
                 <h1>Algoritmos Gulosos</h1>
             </div>
-            <div class = "col-sm-4 grafos">
+            <div class = "subject col-sm-4 col-xs-12 grafos">
                 <h1>Grafos</h1>
             </div>
         </section>
 
          <script>
-            var size;
-            $( document ).ready(function() {
-                size = $(".col-sm-4").css("width");
+            (function( $ ){
+               $.fn.removeClasses = function() {
+                    $('.subject').removeClass('col-sm-3');
+                    $('.subject').removeClass('col-sm-4');
+                    $('.subject').removeClass('col-sm-6');
+               }; 
+            })( jQuery );
+
+            $( "nav" ).hover(function() {
+                $(this).removeClasses();
+                $('.subject').addClass('col-sm-4');
             });           
-            $( ".col-sm-4.cpp" ).on({"mouseenter":function() {
-                $( ".bb" ).css( "width", "25%" );
-                $( ".kadane" ).css( "width", "25%" );
-                $( this ).css( "width", "50%" );},
-                "mouseleave":function() {
-                    $( ".col-sm-4.bb" ).css( "width", size );
-                    $( ".col-sm-4.kadane" ).css( "width", size );
-                    $( ".col-sm-4.cpp" ).css( "width", size );
-                    $( ".col-sm-4.greedy" ).css( "width", size );
-                    $( ".col-sm-4.grafos" ).css( "width", size );
-                    $( ".col-sm-4.back" ).css( "width", size );
-                }
+            $( ".cpp" ).hover(function() {
+
+                $(this).removeClasses();
+                $(this).addClass('col-sm-6');
+
+                $( ".back" ).addClass('col-sm-4');
+                $( ".greedy" ).addClass('col-sm-4');
+                $( ".grafos" ).addClass('col-sm-4');
+
+                $( ".bb" ).addClass('col-sm-3');
+                $( ".kadane" ).addClass('col-sm-3');
+
             });
-            $( ".col-sm-4.bb" ).on({"mouseenter":function() {
-                $( ".cpp" ).css( "width", "25%" );
-                $( ".kadane" ).css( "width", "25%" );
-                $( this ).css( "width", "50%" );},
-                "mouseleave":function() {
-                    $( ".col-sm-4.bb" ).css( "width", size );
-                    $( ".col-sm-4.kadane" ).css( "width", size );
-                    $( ".col-sm-4.cpp" ).css( "width", size );
-                    $( ".col-sm-4.greedy" ).css( "width", size );
-                    $( ".col-sm-4.grafos" ).css( "width", size );
-                    $( ".col-sm-4.back" ).css( "width", size );
-                }                
+            $( ".bb" ).hover(function() {
+                $(this).removeClasses();
+                $(this).addClass('col-sm-6');
+
+                $( ".back" ).addClass('col-sm-4');
+                $( ".greedy" ).addClass('col-sm-4');
+                $( ".grafos" ).addClass('col-sm-4');
+
+                $( ".cpp" ).addClass('col-sm-3');
+                $( ".kadane" ).addClass('col-sm-3');                
             });
-            $( ".col-sm-4.kadane" ).on({"mouseenter":function() {
-                $( ".bb" ).css( "width", "25%" );
-                $( ".cpp" ).css( "width", "25%" );
-                $( this ).css( "width", "50%" );},
-                "mouseleave":function() {
-                    $( ".col-sm-4.bb" ).css( "width", size );
-                    $( ".col-sm-4.kadane" ).css( "width", size );
-                    $( ".col-sm-4.cpp" ).css( "width", size );
-                    $( ".col-sm-4.greedy" ).css( "width", size );
-                    $( ".col-sm-4.grafos" ).css( "width", size );
-                    $( ".col-sm-4.back" ).css( "width", size );
-                }             
+            $( ".kadane" ).hover(function() {
+                $(this).removeClasses();
+                $(this).addClass('col-sm-6');
+
+                $( ".back" ).addClass('col-sm-4');
+                $( ".greedy" ).addClass('col-sm-4');
+                $( ".grafos" ).addClass('col-sm-4');
+
+                $( ".bb" ).addClass('col-sm-3');
+                $( ".cpp" ).addClass('col-sm-3');             
             });
-            $( ".col-sm-4.back" ).on({"mouseenter":function() {
-                $( ".greedy" ).css( "width", "25%" );
-                $( ".grafos" ).css( "width", "25%" );
-                $( this ).css( "width", "50%" );},
-                "mouseleave":function() {
-                   $( ".col-sm-4.bb" ).css( "width", size );
-                   $( ".col-sm-4.kadane" ).css( "width", size );
-                   $( ".col-sm-4.cpp" ).css( "width", size );
-                   $( ".col-sm-4.greedy" ).css( "width", size );
-                   $( ".col-sm-4.grafos" ).css( "width", size );
-                   $( ".col-sm-4.back" ).css( "width", size );
-                }
+            $( ".back" ).hover(function() {  
+                $(this).removeClasses();
+                $(this).addClass('col-sm-6');
+
+                $( ".cpp" ).addClass('col-sm-4');
+                $( ".bb" ).addClass('col-sm-4');
+                $( ".kadane" ).addClass('col-sm-4');
+
+                $( ".greedy" ).addClass('col-sm-3');
+                $( ".grafos" ).addClass('col-sm-3');
             });
-            $( ".col-sm-4.greedy" ).on({"mouseenter":function() {
-                $( ".back" ).css( "width", "25%" );
-                $( ".grafos" ).css( "width", "25%" );
-                $( this ).css( "width", "50%" );},
-                "mouseleave":function() {
-                    $( ".col-sm-4.bb" ).css( "width", size );
-                    $( ".col-sm-4.kadane" ).css( "width", size );
-                    $( ".col-sm-4.cpp" ).css( "width", size );
-                    $( ".col-sm-4.greedy" ).css( "width", size );
-                    $( ".col-sm-4.grafos" ).css( "width", size );
-                    $( ".col-sm-4.back" ).css( "width", size );
-                }
+            $( ".greedy" ).hover(function() {
+                $(this).removeClasses();
+                $(this).addClass('col-sm-6');
+
+                $( ".cpp" ).addClass('col-sm-4');
+                $( ".bb" ).addClass('col-sm-4');
+                $( ".kadane" ).addClass('col-sm-4');
+
+                $( ".back" ).addClass('col-sm-3');
+                $( ".grafos" ).addClass('col-sm-3');
             });
-            $( ".col-sm-4.grafos" ).on({"mouseenter":function() {
-                $( ".greedy" ).css( "width", "25%" );
-                $( ".back" ).css( "width", "25%" );
-                $( this ).css( "width", "50%" );},
-                "mouseleave":function() {
-                    $( ".col-sm-4.bb" ).css( "width", size );
-                    $( ".col-sm-4.kadane" ).css( "width", size );
-                    $( ".col-sm-4.cpp" ).css( "width", size );
-                    $( ".col-sm-4.greedy" ).css( "width", size );
-                    $( ".col-sm-4.grafos" ).css( "width", size );
-                    $( ".col-sm-4.back" ).css( "width", size );
-                }
+            $( ".grafos" ).hover(function() {
+                $(this).removeClasses();
+                $(this).addClass('col-sm-6');
+
+                $( ".cpp" ).addClass('col-sm-4');
+                $( ".bb" ).addClass('col-sm-4');
+                $( ".kadane" ).addClass('col-sm-4');
+
+                $( ".greedy" ).addClass('col-sm-3');
+                $( ".back" ).addClass('col-sm-3');
             });
         </script>     
     </body>
