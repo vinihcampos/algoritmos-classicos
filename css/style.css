@@ -20,23 +20,26 @@ section{
 	height: 90%;
 }
 
+.subject{
+	display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 h1{
 	font-family: 'Bangers';
-	color: #FFF;
+	color: #FFF;	
+    vertical-align: middle;
 }
 
 h2{
-	margin-top: 1%;
 	font-family: 'Poiret One';
 	font-weight: bold;
+    vertical-align: middle;
 }
 
-.subject{
-
-}
 
 .col-sm-6, .col-sm-4, .col-sm-3{
-	padding-top: 8%;
 	height: 50%;
 	-o-transition:.3s;
     -ms-transition:.3s;
