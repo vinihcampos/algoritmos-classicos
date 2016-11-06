@@ -41,10 +41,10 @@ h2{
 
 .col-sm-6, .col-sm-4, .col-sm-3{
 	height: 50%;
-	-o-transition:.3s;
-    -ms-transition:.3s;
-    -moz-transition:.1s;
-    -webkit-transition:.3s;
+	-o-transition:.5s all ease;
+    -ms-transition:.5s all ease;
+    -moz-transition:.5s all ease;
+    -webkit-transition:.5s all ease;
 }
 
 .cpp{
@@ -69,5 +69,9 @@ h2{
 
 .grafos{
 	background: #455A64;
+}
+
+a, a:hover, a:visited{
+	text-decoration: none;
 }
 

@@ -1,0 +1,65 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#side-bar{
+	position: fixed;
+	height: 100%;
+	background: #7B1FA2;
+	padding-bottom: -9999px;
+	margin-bottom: 9999px;
+
+	-o-transition:.5s all ease;
+    -ms-transition:.5s all ease;
+    -moz-transition:.5s all ease;
+    -webkit-transition:.5s all ease;
+}
+
+#topic{
+	width: 100%;
+	color: #FFF;
+	padding-bottom: 5%;
+	border-bottom: 1px solid #BDBDBD;
+}
+
+#topic img{
+	width: 50%;
+	display: block;
+    margin: 2% auto;
+}
+
+#topic h4{
+	font-family: 'Poiret One';
+
+	-o-transition:.5s all ease;
+    -ms-transition:.5s all ease;
+    -moz-transition:.5s all ease;
+    -webkit-transition:.5s all ease;
+}
+
+#content-aux, #content{
+	-o-transition:.5s all ease;
+    -ms-transition:.5s all ease;
+    -moz-transition:.5s all ease;
+    -webkit-transition:.5s all ease;
+}
+
+#content h1{
+	font-family: 'Antic';
+}
+
+#content h2{
+	font-family: 'Poiret One';
+}
+
+#content hr{
+	height: 2px;
+}
+
+pre{
+	background: transparent;
+	border: none;
+}
+

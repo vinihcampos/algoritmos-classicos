@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Sipex 2016 - Algorítmos Clássicos</title>
+
+        <!-- Bootstrap -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+       <link rel="stylesheet" href="../css/subject.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Lobster|Maven+Pro|Dancing+Script|Bangers|Lobster+Two|Bad+Script|Poiret+One|Antic|Rancho' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+
+      	<!-- Code listing-->
+      	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+	</head>
+	<body class="container-fluid">
+		<section id = "side-bar" class = "row col-xs-12 col-sm-2">
+			<div id = "topic" class="text-center">
+				<img src="../img/cpp.png"/>
+				<h4>Introdução a C++</h4>
+			</div>
+		</section>
+		<section id = "content-aux" class="col-sm-2"></section>
+		<section id = "content" class = "row col-sm-10">
+			<div id = "escopo">
+				<h1>Escopo de código</h1>
+				<hr/>
+<pre><code class="cpp">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  	cout &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; endl;
+  	return 0;
+}
+</code></pre>
+			</div>
+
+			<div id = "condicionais">
+				<h1>Estruturas condicionais</h1>
+				<hr/>
+				<div class = "row col-sm-6">
+<pre>
+<h2>IF-ELSE STATEMENT</h2>
+<code class="cpp" >if(/*condition*/){
+	//code
+}else if(/*condition*/){
+	//code
+}else{
+	//code
+}
+</code>
+</pre>
+				</div>
+				<div class = "row col-sm-6">
+<pre>
+<h2>SWITCH STATEMENT</h2>
+<code class="cpp">switch(expression){
+   case constant-expression  :
+      statement(s);
+      break; //optional
+   case constant-expression  :
+      statement(s);
+      break; //optional
+  
+   // you can have any number of case statements.
+   default : //Optional
+      statement(s);
+}
+</code>
+</pre>
+				</div>
+			</div>
+			<div id = "repeticao">
+				<h1>Estruturas de repetição</h1>
+				<hr/>
+				<div class = "row col-sm-4">
+<pre>
+<h2>WHILE LOOP</h2>
+<code class="cpp">while(/*Condition*/){
+	//Code
+}
+</code>
+</pre>
+				</div>
+				<div class = "row col-sm-4">
+<pre>
+<h2>DO WHILE LOOP</h2>
+<code class="cpp">do{
+	//Code
+}while(/*Condition*/);
+</code>
+</pre>
+				</div>
+				<div class = "row col-sm-4">
+<pre>
+<h2>FOR LOOP</h2>
+<code class="cpp">for(int i = 0; i < 10; i++){
+	//Code
+}
+</code>
+</pre>
+				</div>
+			</div>
+			<div id = "funcoes">
+				<h1>Funções</h1>
+				<hr/>
+				<div class = "row col-sm-6">
+<pre>
+<h2>VOID FUNCTION</h2>
+<code class="cpp">
+void &lt;nome_funcao&gt;(parametros){
+	//Code
+}
+</code>
+</pre>
+				</div>
+				<div class = "row col-sm-6">
+<pre>
+<h2>NO VOID FUNCTION</h2>
+<code class="cpp">
+&lt;tipo_retorno&gt; &lt;nome_funcao&gt;(parametros){
+	//Code
+	return &lt;tipo_retorno&gt;
+}
+</code>
+</pre>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			$(document).ready(function() {
+			  $('pre code').each(function(i, block) {
+			    hljs.highlightBlock(block);
+			  });
+			});
+
+			$( "#side-bar" ).click(function() {
+                $(this).toggleClass('col-sm-2');
+                $(this).toggleClass('col-sm-1');
+                $("#topic h4").fadeToggle("fast");
+
+                $("#content-aux").toggleClass('col-sm-2');
+                $("#content-aux").toggleClass('col-sm-1');
+                $("#content").toggleClass('col-sm-10');
+                $("#content").toggleClass('col-sm-11');
+            });
+
+		</script>		
+	</body>
+</html>
