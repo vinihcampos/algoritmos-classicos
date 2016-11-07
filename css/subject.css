@@ -30,7 +30,7 @@ html, body{
     margin: 2% auto;
 }
 
-#topic h4{
+#topic h3{
 	font-family: 'Poiret One';
 
 	-o-transition:.5s all ease;
@@ -61,5 +61,24 @@ html, body{
 pre{
 	background: transparent;
 	border: none;
+}
+
+#menu li, #menu li a, #menu li a:hover, #menu li a:visited{
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Poiret One';
+	color: #FFF;
+	font-size: 20px;
+	border: none;
+	padding: 5% 0;
+}
+
+#menu li hr{
+	width: 0px;
+	margin: 0;
+	-o-transition:.5s all ease;
+    -ms-transition:.5s all ease;
+    -moz-transition:.5s all ease;
+    -webkit-transition:.5s all ease;
 }
 

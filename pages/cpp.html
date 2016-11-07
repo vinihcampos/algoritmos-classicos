@@ -34,7 +34,27 @@
 		<section id = "side-bar" class = "row col-xs-12 col-sm-2">
 			<div id = "topic" class="text-center">
 				<img src="../img/cpp.png"/>
-				<h4>Introdução a C++</h4>
+				<h3>Introdução a C++</h3>
+			</div>
+			<div id = "menu" class = "row col-xs">
+				<ul class = "col-xs-12">
+					<li class = "">
+						<a href = "#escopo">Escopo de código</a>
+						<hr/>
+					</li>
+					<li>
+						<a href = "#condicionais">Estruturas condicionais</a>						
+						<hr/>
+					</li>
+					<li>
+						<a href = "#repeticao">Estruturas de repetição</a>
+						<hr/>
+					</li>
+					<li>
+						<a href = "#funcoes">Funções</a>
+						<hr/>
+					</li>
+				</ul>
 			</div>
 		</section>
 		<section id = "content-aux" class="col-sm-2"></section>
@@ -151,16 +171,24 @@ int main() {
 			  });
 			});
 
-			$( "#side-bar" ).click(function() {
-                $(this).toggleClass('col-sm-2');
-                $(this).toggleClass('col-sm-1');
-                $("#topic h4").fadeToggle("fast");
+			$( "#side-bar #topic" ).click(function() {
+                $("#side-bar").toggleClass('col-sm-2');
+                $("#side-bar").toggleClass('col-sm-1');
+                $("#topic h3").fadeToggle("fast");
 
                 $("#content-aux").toggleClass('col-sm-2');
                 $("#content-aux").toggleClass('col-sm-1');
                 $("#content").toggleClass('col-sm-10');
                 $("#content").toggleClass('col-sm-11');
             });
+
+            $("#menu ul li").hover(
+            	function(){
+            		$(this).find("hr").css("width", "100%");
+            	},function(){
+            		$(this).find("hr").css("width", "0%");
+            	}
+            );
 
 		</script>		
 	</body>
