@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Introdução a C++</title>
+        <title>Busca Binária</title>
 
         <!-- Bootstrap -->
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -34,10 +34,10 @@
 		<script type="text/javascript" src="../js/smooth-scroll.js"></script>
 	</head>
 	<body class="container-fluid">
-		<section id = "side-bar" class = "row col-xs-12 col-sm-2" style="background: #7B1FA2;">
+		<section id = "side-bar" class = "row col-xs-12 col-sm-2" style="background: #E64A19;">
 			<div id = "topic" class="text-center">
-				<a href = "../index.html"><img src="../img/cpp.png"/></a>
-				<h3>Introdução a C++</h3>
+				<a href = "../index.html"><img src="../img/bb.png"/></a>
+				<h3>Busca Binária</h3>
 			</div>
 			<div id = "menu" class = "row col-xs">
 				<ul class = "col-xs-12">
@@ -92,180 +92,6 @@ int main() {
   	return 0;
 }
 </code></pre>
-			</div>
-
-			<div id = "condicionais">
-				<h1>Estruturas condicionais</h1>
-				<hr/>
-				<div class = "row col-sm-6">
-<pre>
-<h3>IF-ELSE STATEMENT</h3>
-<code class="cpp" >if(/*condition*/){
-	//code
-}else if(/*condition*/){
-	//code
-}else{
-	//code
-}
-</code>
-</pre>
-				</div>
-				<div class = "row col-sm-6">
-<pre>
-<h3>SWITCH STATEMENT</h3>
-<code class="cpp">switch(expression){
-   case constant-expression  :
-      statement(s);
-      break; //optional
-   case constant-expression  :
-      statement(s);
-      break; //optional
-  
-   // you can have any number of case statements.
-   default : //Optional
-      statement(s);
-}
-</code>
-</pre>
-				</div>
-			</div>
-			<div id = "repeticao">
-				<h1>Estruturas de repetição</h1>
-				<hr/>
-				<div class = "row col-sm-4">
-<pre>
-<h3>WHILE LOOP</h3>
-<code class="cpp">while(/*Condition*/){
-	//Code
-}
-</code>
-</pre>
-				</div>
-				<div class = "row col-sm-4">
-<pre>
-<h3>DO WHILE LOOP</h3>
-<code class="cpp">do{
-	//Code
-}while(/*Condition*/);
-</code>
-</pre>
-				</div>
-				<div class = "row col-sm-4">
-<pre>
-<h3>FOR LOOP</h3>
-<code class="cpp">for(int i = 0; i < 10; i++){
-	//Code
-}
-</code>
-</pre>
-				</div>
-			</div>
-			<div id = "funcoes">
-				<h1>Funções</h1>
-				<hr/>
-				<div class = "row col-sm-6">
-<pre>
-<h3>VOID FUNCTION</h3>
-<code class="cpp">void &lt;nome_funcao&gt;(parametros){
-	//Code
-}
-</code>
-</pre>
-				</div>
-				<div class = "row col-sm-6">
-<pre>
-<h3>NO VOID FUNCTION</h3>
-<code class="cpp">&lt;tipo_retorno&gt; &lt;nome_funcao&gt;(parametros){
-	//Code
-	return &lt;tipo_retorno&gt;
-}
-</code>
-</pre>
-				</div>
-			</div>
-			<div id = "especial">
-				<h1>Casos especiais</h1>
-				<hr/>
-				<p>Os problemas de maratona de computação requerem um tratamento especial das entradas de testes do algoritmos.</p>
-				<ul>
-					<li>
-						Não é necessário informar ao 'usuário' para informar a entrada de dados.
-						<div class = "row col-sm-6">
-<pre>
-<h3>INCORRETO</h3>
-<code class="cpp">#include &lt;iostream&gt;
-
-using namespace std;
-
-int main() {
-	int idade;
-	cout &lt;&lt; &quot;Digite sua idade: &quot; &lt;&lt; endl;
-	cin &gt;&gt; idade;
-  	cout &lt;&lt; &quot;Sua idade é: &quot; &lt;&lt; idade &lt;&lt; endl;
-  	return 0;
-}
-</code>
-</pre>
-						</div>
-						<div class = "row col-sm-6">
-<pre>
-<h3>CORRETO</h3>
-<code class="cpp">#include &lt;iostream&gt;
-
-using namespace std;
-
-int main() {
-	int idade;
-	cin &gt;&gt; idade;
-  	cout &lt;&lt; idade &lt;&lt; endl;
-  	return 0;
-}
-</code>
-</pre>	
-						</div>
-					</li>
-					<li>
-						Muitas vezes é preciso testar diversas entradas para a mesma execução do algorítmo.
-						<div class = "row col-sm-6">
-<pre>
-<h3>Nº DE EXECUÇÕES DEFINIDAS</h3>
-<code class="cpp">#include &lt;iostream&gt;
-#include &lt;math.h&gt;
-using namespace std;
-
-int main() {
-	int n;
-	float raiz_do_numero;
-	cin &gt;&gt; idade;
-	for(int i = 0; i < n; i++){
-		cin &gt;&gt; raiz_do_numero;
-		cout &lt;&lt; sqrt(raiz_do_numero) &lt;&lt; endl;
-	}
-  	return 0;
-}
-</code>
-</pre>
-						</div>
-						<div class = "row col-sm-6">
-<pre>
-<h3>Nº DE EXECUÇÕES INDEFINIDAS</h3>
-<code class="cpp">#include &lt;iostream&gt;
-#include &lt;cmath&gt;
-using namespace std;
-
-int main() {
-	float raiz_do_numero;
-	while(cin &gt;&gt; raiz_numero){
-		cout &lt;&lt; sqrt(raiz_do_numero) &lt;&lt; endl;
-	}
-  	return 0;
-}
-</code>
-</pre>
-</pre>	
-						</div>
-					</li> 
-				</ul>
 			</div>			
 		</section>
 
