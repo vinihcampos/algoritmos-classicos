@@ -50,8 +50,24 @@ html, body{
 	font-family: 'Antic';
 }
 
-#content h2{
+#content h3{
 	font-family: 'Poiret One';
+}
+
+#content #instalacao h3{
+	margin: 0 1%;
+	padding: 0;
+}
+
+#content p{
+	font-family: 'Maven Pro';
+	font-size: 20px;
+}
+
+#content li{
+	font-family: 'Maven Pro';
+	font-size: 20px;
+	clear: both;
 }
 
 #content hr{

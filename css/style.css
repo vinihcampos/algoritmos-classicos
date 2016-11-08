@@ -73,5 +73,6 @@ h2{
 
 a, a:hover, a:visited{
 	text-decoration: none;
+	border: none;
 }
 
