@@ -22,16 +22,16 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <!-- Google fonts -->
         <link href='https://fonts.googleapis.com/css?family=Lobster|Maven+Pro|Dancing+Script|Bangers|Lobster+Two|Bad+Script|Poiret+One|Antic|Rancho' rel='stylesheet' type='text/css'>
 
       	<!-- Code listing-->
       	<link rel="stylesheet" href="../styles/androidstudio.css">
-		<script src="../js/highlight.pack.js"></script>
+		<script type='text/javascript' src="../js/highlight.pack.js"></script>
 
 		<!-- Nice scroll-->
-		<script src="https://raw.githubusercontent.com/kswedberg/jquery-smooth-scroll/master/jquery.smooth-scroll.js"></script>
+		<script type="text/javascript" src="../js/smooth-scroll.js"></script>
 	</head>
 	<body class="container-fluid">
 		<section id = "side-bar" class = "row col-xs-12 col-sm-2">
@@ -42,27 +42,27 @@
 			<div id = "menu" class = "row col-xs">
 				<ul class = "col-xs-12">
 					<li>
-						<a href = "#instalacao">Instalação</a>
+						<a data-scroll href = "#instalacao">Instalação</a>
 						<hr/>
 					</li>
 					<li>
-						<a href = "#escopo">Escopo de código</a>
+						<a data-scroll href = "#escopo">Escopo de código</a>
 						<hr/>
 					</li>
 					<li>
-						<a href = "#condicionais">Estruturas condicionais</a>						
+						<a data-scroll href = "#condicionais">Estruturas condicionais</a>						
 						<hr/>
 					</li>
 					<li>
-						<a href = "#repeticao">Estruturas de repetição</a>
+						<a data-scroll href = "#repeticao">Estruturas de repetição</a>
 						<hr/>
 					</li>
 					<li>
-						<a href = "#funcoes">Funções</a>
+						<a data-scroll href = "#funcoes">Funções</a>
 						<hr/>
 					</li>
 					<li>
-						<a href = "#especial">Casos especiais</a>
+						<a data-scroll href = "#especial">Casos especiais</a>
 						<hr/>
 					</li>
 				</ul>
@@ -272,13 +272,8 @@ int main() {
 		</section>
 
 		<script>
-			$(document).ready(function() {
-			  $('a').smoothScroll();
-
-			  $('pre code').each(function(i, block) {
-			    hljs.highlightBlock(block);
-			  });
-			});
+			hljs.initHighlightingOnLoad();
+			smoothScroll.init();
 
 			$( "#side-bar #topic" ).click(function() {
                 $("#side-bar").toggleClass('col-sm-2');
