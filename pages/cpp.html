@@ -29,12 +29,43 @@
       	<!-- Code listing-->
       	<link rel="stylesheet" href="../styles/androidstudio.css">
 		<script src="../js/highlight.pack.js"></script>
+
+		<!-- Nice scroll-->
+		<script src="https://raw.githubusercontent.com/kswedberg/jquery-smooth-scroll/master/jquery.smooth-scroll.js"></script>
 	</head>
 	<body class="container-fluid">
 		<section id = "side-bar" class = "row col-xs-12 col-sm-2">
 			<div id = "topic" class="text-center">
 				<img src="../img/cpp.png"/>
-				<h4>Introdução a C++</h4>
+				<h3>Introdução a C++</h3>
+			</div>
+			<div id = "menu" class = "row col-xs">
+				<ul class = "col-xs-12">
+					<li>
+						<a href = "#instalacao">Instalação</a>
+						<hr/>
+					</li>
+					<li>
+						<a href = "#escopo">Escopo de código</a>
+						<hr/>
+					</li>
+					<li>
+						<a href = "#condicionais">Estruturas condicionais</a>						
+						<hr/>
+					</li>
+					<li>
+						<a href = "#repeticao">Estruturas de repetição</a>
+						<hr/>
+					</li>
+					<li>
+						<a href = "#funcoes">Funções</a>
+						<hr/>
+					</li>
+					<li>
+						<a href = "#especial">Casos especiais</a>
+						<hr/>
+					</li>
+				</ul>
 			</div>
 		</section>
 		<section id = "content-aux" class="col-sm-2"></section>
@@ -48,7 +79,7 @@
 					<h3>Linux - (Distribuições Fedora)</h3>
 					<pre><code class="cpp">sudo yum groupinstall 'Development Tools'</code></pre>
 					<h3>Windows</h3>
-					<pre><p>Para programar em C++ no Windows, a forma mais fácil é instalar o <a href="https://sourceforge.net/projects/orwelldevcpp/">DEV-C++</a> ou <a href="http://www.codeblocks.org/downloads/26">Code::Blocks</a>.</p></pre> 
+					<p>Para programar em C++ no Windows, a forma mais fácil é instalar o <a href="https://sourceforge.net/projects/orwelldevcpp/">DEV-C++</a> ou <a href="http://www.codeblocks.org/downloads/26">Code::Blocks</a>.</p>
 				</div>
 			</div>
 			<div id = "escopo">
@@ -154,7 +185,7 @@ int main() {
 </pre>
 				</div>
 			</div>
-			<div class = "especial">
+			<div id = "especial">
 				<h1>Casos especiais</h1>
 				<hr/>
 				<p>Os problemas de maratona de computação requerem um tratamento especial das entradas de testes do algoritmos.</p>
@@ -242,21 +273,33 @@ int main() {
 
 		<script>
 			$(document).ready(function() {
+			  $('a').smoothScroll();
+
 			  $('pre code').each(function(i, block) {
 			    hljs.highlightBlock(block);
 			  });
 			});
 
-			$( "#side-bar" ).click(function() {
-                $(this).toggleClass('col-sm-2');
-                $(this).toggleClass('col-sm-1');
-                $("#topic h4").fadeToggle("fast");
+			$( "#side-bar #topic" ).click(function() {
+                $("#side-bar").toggleClass('col-sm-2');
+                $("#side-bar").toggleClass('col-sm-1');
+                $("#topic h3").fadeToggle("fast");
 
                 $("#content-aux").toggleClass('col-sm-2');
                 $("#content-aux").toggleClass('col-sm-1');
                 $("#content").toggleClass('col-sm-10');
                 $("#content").toggleClass('col-sm-11');
+
+
             });
+
+            $("#menu ul li").hover(
+            	function(){
+            		$(this).find("hr").css("width", "100%");
+            	},function(){
+            		$(this).find("hr").css("width", "0%");
+            	}
+            );
 		</script>		
 	</body>
 </html>
