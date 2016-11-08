@@ -40,29 +40,17 @@
 				<h3>Busca Binária</h3>
 			</div>
 			<div id = "menu" class = "row col-xs">
-				<ul class = "col-xs-12">
+				<ul class = "text-center col-xs-12">
 					<li>
-						<a data-scroll href = "#instalacao">Instalação</a>
+						<a data-scroll href = "#definicao">O que é busca binária?</a>
 						<hr/>
 					</li>
 					<li>
-						<a data-scroll href = "#escopo">Escopo de código</a>
+						<a data-scroll href = "#principio">Princípio de funcionamento</a>
 						<hr/>
 					</li>
 					<li>
-						<a data-scroll href = "#condicionais">Estruturas condicionais</a>						
-						<hr/>
-					</li>
-					<li>
-						<a data-scroll href = "#repeticao">Estruturas de repetição</a>
-						<hr/>
-					</li>
-					<li>
-						<a data-scroll href = "#funcoes">Funções</a>
-						<hr/>
-					</li>
-					<li>
-						<a data-scroll href = "#especial">Casos especiais</a>
+						<a data-scroll href = "#codigo">Código</a>
 						<hr/>
 					</li>
 				</ul>
@@ -70,29 +58,36 @@
 		</section>
 		<section id = "content-aux" class="col-sm-2"></section>
 		<section id = "content" class = "row col-sm-10">
-			<div id = "instalacao">
-				<h1>Instalação</h1>
+			<div id = "definicao">
+				<h1>O que é busca binária?</h1>
 				<hr/>
-				<h3>Linux - (Distribuições Debian)</h3>
-				<pre><code class="cpp">sudo apt-get install build-essential</code></pre>
-				<h3>Linux - (Distribuições Fedora)</h3>
-				<pre><code class="cpp">sudo yum groupinstall 'Development Tools'</code></pre>
-				<h3>Windows</h3>
-				<p>Para programar em C++ no Windows, a forma mais fácil é instalar o <a href="https://sourceforge.net/projects/orwelldevcpp/">DEV-C++</a> ou <a href="http://www.codeblocks.org/downloads/26">Code::Blocks</a>.</p>
+				<p>É um dos algoritmos fundamentais da ciência da computação, e é utilizado para realizar pesquisas em <strong>vetores ordenados</strong>. O qual possui complexidade de tempo de execução de <i>Ο(log n)</i>.</p>
+				<h3>O que significa ser O(log n)?</h3>
+				<p>Significa que o algoritmo executa no <strong>log n</strong> vezes.</p>
+			</div>	
+			<div id = "principio">
+				<h1>Princípio de funcionamento</h1>
+				<hr/>
+				<p>Tomemos o seguinte vetor como exemplo, onde desejamos encontrar o valor 31.</p>
+				<img src="../img/binary_search_0.jpg"/>
+				<p>Então, estabelecemos 3 índices: </p>
+				<ul>
+					<li>esquerdo = 0</li>
+					<li>direito = 9</li>
+					<li>meio = (direito + esquerdo) / 2 = 4</li>
+				</ul>
+				<p>O algoritmo sempre irá verificar o valor na posição <strong>meio</strong>, de modo que se o valor procurado estiver nessa posição, o algoritmo é finalizado, retornando o índice <strong>meio</strong>. Caso o valor na posição <strong>meio</strong> seja <strong>&gt;</strong> que o procurado, então <strong>direito</strong> = <strong>meio</strong> - 1, caso contrário, <strong>esquerdo</strong> = <strong>meio</strong> + 1. Então o algoritmo é executado até que o valor desejado seja encontrado, ou quando <strong>esquerdo</strong> > <strong>direito</strong>, neste caso o algoritmo retorna -1, já que não o valor desejado não está na lista. Continuando o exemplo acima, temos a seguinte situação:</p>
+				<img src="../img/binary_search_1.jpg"/>
+				<p>É comparada o valor desejado, 31, com o valor na posição 4, 27. Como vetor[<strong>meio</strong>] &lt; 31, então, <strong>esquerdo</strong> = <strong>meio</strong> + 1. Nesse momento, um novo <strong>meio</strong> é calculado, seguindo a mesma equação definida anteriormente, ficando com o valor 7.</p>
+				<img src="../img/binary_search_3.jpg"/>
+				<p>É repetido o mesmo processo anterior, onde compara-se o valor de vetor[<strong>meio</strong>] com 31, e nesse caso vetor[<strong>meio</strong>] > 31, então <strong>direito</strong> = <strong>meio</strong> - 1. Um novo <strong>meio</strong> é cálculado, ficando com valor 5.</p>
+				<img src="../img/binary_search_5.jpg"/>
+				<p>Nesse momento, ao fazer a comparação de vetor[<strong>meio</strong>] com 31, tem-se que vetor[<strong>meio</strong>] == 31, então o algoritmo retorna o valor 5 e finaliza o algoritmo.</p>
 			</div>
-			<div id = "escopo">
-				<h1>Escopo de código</h1>
+			<div id = "codigo">
+				<h1>Algoritmo</h1>
 				<hr/>
-<pre><code class="cpp">#include &lt;iostream&gt;
-
-using namespace std;
-
-int main() {
-  	cout &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; endl;
-  	return 0;
-}
-</code></pre>
-			</div>			
+			</div>		
 		</section>
 
 		<script>

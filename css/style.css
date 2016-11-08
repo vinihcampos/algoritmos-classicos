@@ -71,8 +71,9 @@ h2{
 	background: #455A64;
 }
 
-a, a:hover, a:visited{
+a, a:hover, a:visited, a:link{
 	text-decoration: none;
 	border: none;
+	outline: 0;
 }
 

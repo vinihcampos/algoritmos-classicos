@@ -64,9 +64,12 @@ html, body{
 	margin-left: 1%;
 }
 
+#content img{
+	padding: 1%;
+}
+
 #content li{
 	font-family: 'Maven Pro';
-	font-size: 20px;
 	clear: both;
 }
 
@@ -84,19 +87,18 @@ pre{
 	text-decoration: none;
 	font-family: 'Poiret One';
 	color: #FFF;
-	font-size: 20px;
-	border: none;
+	font-size: 19px;
 	padding: 5% 0;
 	outline: 0;
 }
 
 #menu li hr{
 	width: 0px;
-	margin: 0;
-	-o-transition:.5s all ease;
-    -ms-transition:.5s all ease;
-    -moz-transition:.5s all ease;
-    -webkit-transition:.5s all ease;
+	margin: 0 auto;
+	-o-transition:.5s width ease;
+    -ms-transition:.5s width ease;
+    -moz-transition:.5s width ease;
+    -webkit-transition:.5s width ease;
 }
 
 a{
