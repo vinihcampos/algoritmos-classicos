@@ -40,7 +40,7 @@
 				<h3>Busca Binária</h3>
 			</div>
 			<div id = "menu" class = "row col-xs">
-				<ul class = "text-center col-xs-12">
+				<ul class = "col-xs-12">
 					<li>
 						<a data-scroll href = "#definicao">O que é busca binária?</a>
 						<hr/>
@@ -61,9 +61,11 @@
 			<div id = "definicao">
 				<h1>O que é busca binária?</h1>
 				<hr/>
-				<p>É um dos algoritmos fundamentais da ciência da computação, e é utilizado para realizar pesquisas em <strong>vetores ordenados</strong>. O qual possui complexidade de tempo de execução de <i>Ο(log n)</i>.</p>
+				<p>É um dos algoritmos fundamentais da ciência da computação e é utilizado para realizar pesquisas em <strong>vetores ordenados</strong>. Tal algoritmo possui complexidade de tempo de execução igual a <i>Ο(log n)</i>.</p>
 				<h3>O que significa ser O(log n)?</h3>
-				<p>Significa que o algoritmo executa no <strong>log n</strong> vezes.</p>
+				<p>Ao se criar um algoritmo, um dos pontos a se verificar é a complexidade temporal do programa, pois a partir dela pode-se vericar a eficiência do algoritmo. De forma geral, a complexidade se baseia nos <i>loops</i> (estruturas de repetição) que o programa utiliza.</p>
+				<p>Um caso fácil para analisar é a impressão de todos os números de um vetor. Como o laço desse programa irá percorrer todos os elementos do vetor, então dizemos que esse loop executa <strong>n vezes</strong>. Como essa é a única estrutura de repetição do algoritmo, diz-se que o programa tem complexidade temporal de <i>O(n)</i>. Então, na busca binária, o laço do algoritmo sempre está trabalhando com um vetor de <strong>n/2</strong>, ou seja, a cada execução o vetor diminui seu tamanho em <strong>n/2</strong> e esse tipo de execução caracteriza-se pelo <strong>log n</strong>, então o algoritmo possui complexidade de <i>O(log n)</i>. Isso significa que a utilização da busca binária é melhor que usar uma busca linear, já que <i>O(log n) < O(n)</i>.</p>
+
 			</div>	
 			<div id = "principio">
 				<h1>Princípio de funcionamento</h1>
@@ -106,7 +108,7 @@
 }</code></pre>
 				</div>
 				<div class = "row col-sm-12">
-<pre><h3>Busca binária - caso o valor não esteja na lista, retorna o primeiro elemento que seja maior que o valor</h3>
+<pre><h3>Busca binária - Retorna o primeiro elemento que seja maior ou igual que o valor</h3>
 <code class="cpp">int lowerBB(int tamanho_vetor, int v[], int valor){
 	int esq = 0; // Índice esquerdo
 	int dir = tamanho_vetor - 1; // Índice direito
@@ -126,7 +128,7 @@
 }</code></pre>
 				</div>
 				<div class = "row col-sm-12">
-<pre><h3>Busca binária - caso o valor não esteja na lista, retorna o menor elemento que seja mais próximo do valor</h3>
+<pre><h3>Busca binária - Retorna o ultimo elemento que seja menor ou igual que o valor</h3>
 <code class="cpp">int upperBB(int tamanho_vetor, int v[], int valor){
 	int esq = 0; // Índice esquerdo
 	int dir = tamanho_vetor - 1; // Índice direito

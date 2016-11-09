@@ -62,6 +62,7 @@ html, body{
 	font-family: 'Maven Pro';
 	font-size: 20px;
 	margin-left: 1%;
+	text-align: justify;
 }
 
 #content img{
@@ -88,6 +89,7 @@ pre{
 	font-family: 'Poiret One';
 	color: #FFF;
 	font-size: 19px;
+	text-align: center;
 	padding: 5% 0;
 	outline: 0;
 }
