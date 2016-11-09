@@ -46,6 +46,10 @@
 						<hr/>
 					</li>
 					<li>
+						<a data-scroll href = "#aplicacao">Aplicações</a>
+						<hr/>
+					</li>
+					<li>
 						<a data-scroll href = "#principio">Princípio de funcionamento</a>
 						<hr/>
 					</li>
@@ -65,7 +69,22 @@
 				<h3>O que significa ser O(log n)?</h3>
 				<p>Ao se criar um algoritmo, um dos pontos a se verificar é a complexidade temporal do programa, pois a partir dela pode-se vericar a eficiência do algoritmo. De forma geral, a complexidade se baseia nos <i>loops</i> (estruturas de repetição) que o programa utiliza.</p>
 				<p>Um caso fácil para analisar é a impressão de todos os números de um vetor. Como o laço desse programa irá percorrer todos os elementos do vetor, então dizemos que esse loop executa <strong>n vezes</strong>. Como essa é a única estrutura de repetição do algoritmo, diz-se que o programa tem complexidade temporal de <i>O(n)</i>. Então, na busca binária, o laço do algoritmo sempre está trabalhando com um vetor de <strong>n/2</strong>, ou seja, a cada execução o vetor diminui seu tamanho em <strong>n/2</strong> e esse tipo de execução caracteriza-se pelo <strong>log n</strong>, então o algoritmo possui complexidade de <i>O(log n)</i>. Isso significa que a utilização da busca binária é melhor que usar uma busca linear, já que <i>O(log n) < O(n)</i>.</p>
+			</div>
+			<div id = "aplicacao">
+				<h1>Aplicações</h1>
+				<hr/>
+				<h3>Dicionário</h3>
+				<p>Quando deseja-se encontrar a definição de uma palavra ou termo.</p>
+				<h3>Agenda Telefônica</h3>
+				<p>Quando deseja-se encontrar o contato de uma pessoa.</p>
+				<h3>Campos Autocompletáveis</h3>
+				<p>Quando deseja-se encontrar as palavras que possuam prefixos em comum. Para uma melhor explicação visite <a href = "https://www.weheartswift.com/binary-search-applications/" target="_blank">We&#9829Swift</a>.</p>
+				<h3>Jogo Akinator</h3>
+				<p>O jogo consiste numa série de perguntas para adivinhar o que o usuário pensou.</p>
+				<h3>Jogo de Adivinhação</h3>
+				<p>Duas pessoas X e Y. X pensa em um número, estabelece um intervalo e Y tenta adivinhar esse número. A cada erro de Y, X diz se o valor que Y pensou é maior ou menor, então Y continua até acertar ou acabar as tentativas.</p>
 
+				<p>Para mais aplicações, visite o <a target = "_blank" href = "https://www.quora.com/What-are-some-clever-applications-of-binary-search">Quora</a>.</p>
 			</div>	
 			<div id = "principio">
 				<h1>Princípio de funcionamento</h1>
