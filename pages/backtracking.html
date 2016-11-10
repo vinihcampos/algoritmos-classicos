@@ -46,6 +46,14 @@
 						<hr/>
 					</li>
                     <li>
+                        <a data-scroll href = "#funcionamento">Pincípio de funcionamento</a>
+                        <hr/>
+                    </li>
+                    <li>
+                        <a data-scroll href = "#pseudocodigo">Pseudocódigo</a>
+                        <hr/>
+                    </li>
+                    <li>
                         <a data-scroll href = "#referencias">Referências</a>
                         <hr/>
                     </li>
@@ -63,14 +71,43 @@
                 <p>A complexidade desse problema pode variar bastante de acordo com o problema, por exemplo, imagine um lista com N elementos distintos e o problema pede que você mostre todas as possíveis permutações desses elementos, então o programa irá gerar <strong>N!</strong> elementos, tornando a complexidade do algoritmo em O(N!).</p>
                 <p>Imagine agora o Σ = {0,1} e a partir desse conjunto pede-se para gerar todos os números binários de tamanho <i>N</i>, então o algoritmo irá ter complexidade O(2^n).</p>
 			</div>
+            <div id = "funcionamento">
+                <h1>Pincípio de funcionamento</h1>                    
+                <hr/>
+                <p>O processo chave do backtracking é a recursão, pois a partir dela é possível avançar e retroceder ao final de cada recursão. Então, dado um conjunto de N elementos, a cada n-th utilizado na possível solução, ele é retirado dessa lista e por recursão continua-se o algoritmo, até que o conjunto fique vazio.</p>
+                <img src="../img/back.png">
+                <p>A imagem acima mostra o processo de recursão através de uma árvore, onde o conjunto se torna vazio quando não existe mais nós para se percorrer, pois nesse ponto é verificado se o estado atual é uma solução válida, entao a recursão desse momento é finalizada e continua-se por um caminho alternativo a partir do ponto anterior.</p>
+
+                <h3>Observações</h3>
+                <ul>
+                    <li>Geralmente os problemas tem características combinatórias.</li>
+                    <li>Nem sempre é necessário analisar todas as possíveis soluções, pois é possível realizar <i>podas</i> na árvore de soluções, caso o estado atual não leve a uma solução desejada.</li>
+                </ul>
+            </div>
+            <div id = "pseudocodigo">
+            <h1>Pseudocódigo</h1>
+            <hr/>
+<pre><code class="cpp">Pegue um ponto inicial.
+while(Problema não está resolvido)
+    Para cada caminho a partir do ponto inicial.
+        Verifica se o caminho selecionado é seguro, se sim, 
+            seleciona-o e faz uma chamada recursiva para o resto do problema
+        Se a recursão retornar true, então 
+            retorne true.
+        Se não, 
+            desfaça o movimento atual e retorne falso.
+    Fim para
+    Se nenhum dos movimentos funcionar, então retorne false, SEM SOLUÇÃO.
+}</code></pre>
+            </div>
             <div id = "referencias">
                 <h1>Referências</h1>
                 <hr/>
                 <ol>
-                    <li><a target="_blank" href="https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/">Binary Search</a></li>
-                    <li><a target="_blank" href="https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm">Data Structure and Algorithms Binary Search</a></li>
-                    <li><a target="_blank" href="https://www.weheartswift.com/binary-search-applications/"> Binary Search and Applications</a></li>
-                    <li><a target="_blank" href="https://www.quora.com/What-are-some-clever-applications-of-binary-search">What are some clever applications of binary search?</a></li>
+                    <li><a target="_blank" href="https://en.wikipedia.org/wiki/Backtracking">Backtracking</a></li>
+                    <li><a target="_blank" href="http://pt.stackoverflow.com/questions/103184/o-que-%C3%A9-um-algoritmo-backtracking">O que é um algoritmo Backtracking?</a></li>
+                    <li><a target="_blank" href="http://www.decom.ufop.br/toffolo/site_media/uploads/2011-1/bcc402/slides/10._backtracking.pdf"> Backtracking - Algoritmos e Propgramação Avançada</a></li>
+                    <li><a target="_blank" href="http://algorithms.tutorialhorizon.com/introduction-to-backtracking-programming/">Introduction To Backtracking Programming</a></li>
                 </ol>
             </div>			
 		</section>
