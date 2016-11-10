@@ -43,19 +43,15 @@
 			<div id = "menu" class = "row col-xs">
 				<ul class = "col-xs-12">
 					<li>
-						<a data-scroll href = "#tad">Tipos Abstratos de Dados</a>
-						<hr/>
-					</li>
-					<li>
 						<a data-scroll href = "#Grafos">Grafos</a>
 						<hr/>
 					</li>
 					<li>
-						<a data-scroll href = "#app">Aplicações</a>
+						<a data-scroll href = "#percorrimento">Representação de Grafos</a>
 						<hr/>
 					</li>
 					<li>
-						<a data-scroll href = "#percorrimento">Arestas e Rercorrimento</a>
+						<a data-scroll href = "#app">Aplicações</a>
 						<hr/>
 					</li>
 					<li>
@@ -71,34 +67,24 @@
 		</section>
 		<section id = "content-aux" class="col-sm-2"></section>
 		<section id = "content" class = "row col-sm-10">
-			<div id = "tad">
-				<h1>Tipos Abstratos de Dados</h1>
-				<hr/>
-				Um problema clássico da Ciência da Computação é encontrar a sublísta contígua de soma máxima, ou o maior subarranjo, ou subvetor de soma máxima a partir de uma lista ou vetor de números.
-				<br/>
-				<br/>
-				No arranjo acima temos a soma máxima de //STUB começando na posição %d e terminando na posição  %d.
-				É importante notar que geralmente o problema envolve um conjunto de números inteiros, com elementos positivos e negativos, já que, se não houver números negativos, toda a lista é uma solução trivial para o problema.
-			</div>
 			<div id = "Grafos">
 				<h1>Grafos</h1>
 				<hr/>
-				1. simplified model for maximum likelihood estimation of patterns in digitized images.
-				<br/>
-				2. Maximum subarray problem adapted for manycore architectures
-				<br/>
-				https://www.quora.com/What-are-some-applications-of-maximum-subarray-problems
-
+				<p>Grafos são estruturas de dados difusas em Ciência da Computação, existem milhares de problemas computacionais que podem ser modelados utilizandos Grafos. Vale ressaltar que a teoria de grafos também é muito trabalhada na área de matemática, onde as áreas de pesquisa de computação e matemática se misturam, sendo assim, é muito comum encontar textos mais voltados para matermática que para computação relacionados a Grafos.
+				</p>
+				<h3>Mas o que é um Grafo?</h3>
+				<p> Um Grafo G = (V, E) é um conjunto de vértices V e um conjunto de arestas E (de <i>edges</i> em inglês) utilizados para representar entidades e suas relãões. Comumente é fácil encontrar representações visuais de grafos com "bolinhas e tracinhos", onde cada vértice representa uma entidade (pessoa, cidade, etc) e cada aresta que liga dois vértices representando a relação entre os vértices. Como exemplo, imagine o Facebook e cada pessoa como um vértice, as arestas entre os vértices podem representar as amizades explicitas na rede social. </p>
+				<p>O caso do Facebook representa bem um caso de grafos não-direcionados, onde cada aresta representa uma relação dos dois lados (se A é amigo de B, B é amigo de A), mas existem também os grafos dirigídos, onde uma relação é unidirecional, por exemplo, um grafo G, onde os vértices representam cidades e as arestas as estradas ligando-as, de modo que as estradas sejam de mão única.</p>
+			</div>
+			<div id = "percorrimento">
+			<h1>Representação de Grafos</h1>
+				<hr/>
+				<p>Existem dois métodos comumente utilizados para representar um grafo G = (V,E) computacionalmente, como uma coleção de listas de adjacência ou por meio de uma matriz de adjacência. Cada tipo de representação tem suas vantágens, normalmente, a representação por listas de adjacência são utilizadas para grafos esparços, ou seja, que possuem poucas arestas, podendo diminuir o tempo computacional de alguns algoritmos. A representação por matriz é geralmente utilizada para grafos densos, com muitas arestas, ou quando é necessário indentificar se existe uma aresta entre dois vértices.</p>
 			</div>
 			<div id = "app">
 			<h1>Aplicações</h1>
 				<hr/>
 			
-			</div>
-			<div id = "percorrimento">
-			<h1>Arestas e percorrimento</h1>
-				<hr/>
-				
 			</div>
 			<div id = "BFS">	
 			<h1>Busca em largura</h1>

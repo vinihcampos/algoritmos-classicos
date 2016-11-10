@@ -11,7 +11,7 @@
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
        <link rel="stylesheet" href="../css/subject.css">
-
+       <link rel="stylesheet" href="../css/math.css"
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -69,56 +69,60 @@
 			<div id = "maximum">
 				<h1>Sublista contígua de soma máxima</h1>
 				<hr/>
-				Um problema clássico da Ciência da Computação é encontrar a sublísta contígua de soma máxima, ou o maior subarranjo, ou subvetor de soma máxima a partir de uma lista ou vetor de números.
-				<br/>
-				<br/>
-				No arranjo acima temos a soma máxima de //STUB começando na posição %d e terminando na posição  %d.
-				É importante notar que geralmente o problema envolve um conjunto de números inteiros, com elementos positivos e negativos, já que, se não houver números negativos, toda a lista é uma solução trivial para o problema.
+				<p>Um problema clássico da Ciência da Computação é encontrar a sublísta contígua de soma máxima, ou o maior subarranjo a partir de uma lista ou vetor de números.</p>
+				<br>
+				<div class="array">
+				[1, 8, -9, <strong>3</strong>, <strong>4</strong>, <strong>7</strong>, -10, 9, 0, -2]
+				</div>
+				<br>
+				<p>No arranjo acima temos a soma máxima de 14 começando na posição 3 e terminando na posição  5.
+				É importante notar que geralmente o problema envolve um conjunto de números inteiros, com elementos positivos e negativos, já que, se não houver números negativos, a lista inteira é uma solução trivial para o problema.</p>
 			</div>
 			<div id = "app">
 				<h1>Aplicações</h1>
 				<hr/>
-				1. simplified model for maximum likelihood estimation of patterns in digitized images.
+				<p> Além de um problema clássico para maratona de proramação, o problema de encontrar o subarranjo com maior soma é tipicamente utilizado em um modelo simplificado de estimar padrões em imagens digitais.</p>
 				<br/>
-				2. Maximum subarray problem adapted for manycore architectures
-				<br/>
-				https://www.quora.com/What-are-some-applications-of-maximum-subarray-problems
+				<p>Geralmente, esse problema é um subproblema de questões maiores e é necessário ser resolvido de forma eficiente.</p>
 
 			</div>
 			<div id = "Neff">
 			<h1>Algoritmo não eficiente</h1>
 				<hr/>
-			Uma solução simples e intuitiva para o problema, seria testar todos as subístas contíguas, ou seja, iniciar 
-				<pre><code class="cpp">void seg_max(int *v, int n, int & x, int &y , int & max){
+			<p>Uma solução simples e intuitiva para o problema, seria testar todos as sublistas contíguas, ou seja, testar se o arranjo começando na posição i até a posição j é o subarranjo de soma máxima. O código a seguir é uma implementação dessa ideia:
+			</p>
+				<pre><code class="cpp">int seg_max(int *v, int sz, int & x, int &y){
 int i,j;
-int soma; 
+int soma, max; 
 max = -1; 
-for( i = 0; i < n; ++i){
+for( i = 0; i < sz; ++i){
 	soma = 0;
 	for( j = i; j < n; ++j){
 		soma += v[j];
 	   		if( soma > max ){
-	    		max = soma;
-	    		x = i;
-	    		y = j;
+	    			max = soma;
+	    			x = i;
+	    			y = j;
 	   		}
 	}
 }
+return max;
 }
 </code></pre>
-http://marathoncode.blogspot.com.br/2012/09/algoritmo-de-kadane.html
+<p>O algoritmo acima tem uma complexidade assintótica temporal de <i>O(N²)</i>, como explicamos anteriormente no tópico da busca binária, isso significa que o tempo para a execução do código aumenta quadraticamente com o aumento do tamanho do vetor.</p>
 			</div>
 			<div id = "kadane">
 			<h1>Algoritmo de Kadane</h1>
 				<hr/>
-				<pre><code class="cpp">int kadane(int *v, int n, int & x, int &y){
+			<p>O estatístico Joseph Born Kadane foi responsável por escrever um algoritmo em tempo linear para o problema de sublísta contígua máxima trabalhando na ideia de armazenar a soma atual e caso, a soma atual resulte em menos que zero, atribuímos a soma atual zero. Pode-se pensar que inicialmente a soma máxima é no mínimo 0, onde o vetor vazio é a solução. Com isso, intera-se sobre a lista atualizando a soma atual.</p>
+				<pre><code class="cpp">int kadane(int *v, int sz, int & x, int &y){
 int max_atual, max_total;
 int temp;
 int i;
 max_atual = 0;
 max_total = -1;
 temp = 0;
-for( i=0; i < n; ++i){
+for( i=0; i < sz; ++i){
  	max_atual = max_atual + v[i];
 	if(max_atual < 0) { 
 		max_atual = 0;
@@ -133,10 +137,14 @@ for( i=0; i < n; ++i){
 return max_total;
 }
 </code></pre>
+	<p>O algoritmo de Kadane é centrado nas variáveis max_atual e max_total, onde o máximo temporário é atualizado  max_atual = max(max_atual + v[i], v[i]), e a soma máxima é atualizada de acordo com a o valor atual da variável e o valor atual do máximo temeporário max_total = max(max_total, max_atual)</p>
+	<p>Desafio: Conseguem implementar esse algoritmo recursivamente?</p>
 			</div>
 			<div id = "especial">	
 			<h1>Casos Especiais</h1>
-				<hr/>>			
+				<hr/>
+
+			</div>			
 		</section>
 
 		<script>
