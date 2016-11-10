@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Algoritmos Gulosos</title>
+
+        <!-- Bootstrap -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+       <link rel="stylesheet" href="../css/subject.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Lobster|Maven+Pro|Dancing+Script|Bangers|Lobster+Two|Bad+Script|Poiret+One|Antic|Rancho' rel='stylesheet' type='text/css'>
+
+      	<!-- Code listing-->
+      	<link rel="stylesheet" href="../styles/androidstudio.css">
+		<script type='text/javascript' src="../js/highlight.pack.js"></script>
+
+		<!-- Nice scroll-->
+		<script type="text/javascript" src="../js/smooth-scroll.js"></script>
+	</head>
+	<body class="container-fluid">
+		<section id = "side-bar" class = "row col-xs-12 col-sm-2" style="background: #FFA000;">
+			<div id = "topic" class="text-center">
+				<a href = "../index.html"><img src="../img/greedy.png"/></a>
+				<h3>Algoritmos Gulosos</h3>
+			</div>
+			<div id = "menu" class = "row col-xs">
+				<ul class = "col-xs-12">
+					<li>
+						<a data-scroll href = "#definicao">O que são algoritmos gulosos?</a>
+						<hr/>
+					</li>
+					<li>
+						<a data-scroll href = "#funcionamento">Exemplo de funcionamento</a>
+						<hr/>
+					</li>
+					<li>
+						<a data-scroll href = "#referencias">Referências</a>
+						<hr/>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section id = "content-aux" class="col-sm-2"></section>
+		<section id = "content" class = "row col-sm-10">
+			<div id = "definicao">
+				<h1>O que são algoritmos gulosos?</h1>
+				<hr/>
+				<p>Um algoritmo guloso é um paradigma de programação que procura soluções locais esperando que essas soluções também sejam soluções globais. Nem sempre essa estratégia produz uma solução ótima, porém pode produzir resultados aproximados que são satisfatórios.</p>
+
+				<h3>O que seria uma solução local?</h3>
+				<p>Ao algoritmo fazer uma escolha que no momento satisfaça as condições do problema, essa escolha deve se expandir a solução final do problema, ou seja, ao se fazer uma escolha, ela não é revista e se mantém até o final.</p>
+			</div>
+			<div id = "funcionamento">
+				<h1>Exemplo de funcionamento</h1>
+				<hr/>
+				<p>A estratégia gulosa, assim como o backtracking, não possui uma solução específica e pode variar de acordo com o problema. Então, tomemos o problema abaixo como exemplo.</p>
+
+				<h3>Problema do Troco</h3>
+				<p><i>Dado um conjunto S tipos de cédulas e um valor V , deseja-se saber qual é o número mínimo de cédulas que podemos usar para alcançar V. O problema terá como entrada um conjunto S de cédulas e um valor V. Deverá ser apresentado uma resposta com o número de cédulas de cada tipo que foi usada no troco.</i></p>
+
+				<h3>Casos de teste</h3>
+
+				<p><strong>Entrada: </strong>S = {100, 50, 25, 10, 5, 1} e V = 275</p>
+				<p><strong>Saída: </strong> {2, 1, 1 , 0, 0, 0}</p>
+
+				<p><strong>Entrada: </strong>S = {20, 10, 5, 1} e V = 777</p>
+				<p><strong>Saída: </strong> {38, 1, 1 , 2}</p>
+
+				<h3>Como solucionar?</h3>
+				<ol>
+					<li>C = maior cédula do conjunto;</li>
+					<li>Dividir o valor V por C e isso resultará no número de cédulas de C;</li>
+					<li>V = V mod C;</li>
+					<li>C é retirado do conjunto de células;</li>
+					<li>repete-se o passo 1 enquanto V > 0.</li>
+				</ol>
+
+
+				<h3>Dica: </h3>
+				<p>Neste problema assumimos que os conjuntos de entrada vêm ordenados, porém nem todos os problemas tem essa característica, então muitos problemas são solucionados com a ordenação dos dados.</p>
+				<div class = "row col-sm-7">
+<pre>
+<h3>Algoritmo</h3>
+<code class = "cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+int main(){
+	int n_cedulas;
+	int v;
+	cin&gt;&gt;n_cedulas;
+	int cedulas[n_cedulas];
+	for(int i = 0; i &lt; n_cedulas; ++i){
+		cin&gt;&gt;cedulas[i];
+	}	
+	cin&gt;&gt;v;
+	for(int i = 0; i &lt; n_cedulas; ++i){
+		cout&lt;&lt;"Cédula "&lt;&lt;cedulas[i]&lt;&lt;": "&lt;&lt;v/cedulas[i]&lt;&lt;endl;
+		v  = v % cedulas[i];
+	}
+	return 0;
+}</code></pre>
+				</div>
+				<div class = "row col-sm-5">
+					<div class = "col-sm-6">
+<pre>
+<h3>Entrada 1: </h3>
+<code class = "cpp">4
+20 10 5 1
+777
+</code></pre>
+<pre><h3>Saída 1: </h3>
+<code class = "cpp">Cédula 20: 38
+Cédula 10: 1
+Cédula 5: 1
+Cédula 1: 2
+</code></pre>
+					</div>
+					<div class = "col-sm-6">
+<pre><h3>Entrada 2: </h3>
+<code class = "cpp">6
+100 50 25 10 5 1
+275
+</code></pre>
+<pre><h3>Saída 2: </h3>
+<code class = "cpp">Cédula 100: 2
+Cédula 50: 1
+Cédula 25: 1
+Cédula 10: 0
+Cédula 5: 0
+Cédula 1: 0
+</code></pre>	
+					</div>
+				</div>
+			</div>
+			<div id = "aplicacoes" class = "col-sm-12">
+				<h1>Aplicações</h1>
+				<hr/>
+
+				<h3><a target = "_blank" href="http://www.personal.kent.edu/~rmuhamma/Algorithms/MyAlgorithms/Greedy/knapscakFrac.htm">Mochila fracionária</a></h3>
+                <p>Existe N itens em uma loja e deseja-se carregar o máximo de itens possível, porém a mochila possui uma carga máxima. Neste problema os itens podem ser fracionados.</p>
+                <h3><a target = "_blank" href="https://en.wikipedia.org/wiki/Activity_selection_problem">Seleção de atividades</a></h3>
+                <p>Uma série de atividades irão ocorrer em 1 sala e apenas uma atividade por vez pode ocorrer, então deve-se maximizar o número de atividades desta sala.</p>
+			</div>
+			<div id = "referencias" class = "col-sm-12">
+				<h1>Referências</h1>
+				<hr/>
+				<ol>
+					<li><a target="_blank" href="https://en.wikipedia.org/wiki/Greedy_algorithm	">Greedy algorithm</a></li>
+					<li><a target="_blank" href="https://www.tutorialspoint.com/data_structures_algorithms/greedy_algorithms.htm">Data Structures - Greedy Algorithms</a></li>
+					<li><a target="_blank" href="http://www.each.usp.br/digiampietri/SIN5013/13-algoritmosGulosos.pdf">Algoritmos Gulosos</a></li>
+				</ol>
+			</div>			
+		</section>
+
+		<script>
+			hljs.initHighlightingOnLoad();
+			smoothScroll.init();
+
+			/*$( "#side-bar #topic" ).click(function() {
+                $("#side-bar").toggleClass('col-sm-2');
+                $("#side-bar").toggleClass('col-sm-1');
+                $("#topic h3").fadeToggle("fast");
+
+                $("#content-aux").toggleClass('col-sm-2');
+                $("#content-aux").toggleClass('col-sm-1');
+                $("#content").toggleClass('col-sm-10');
+                $("#content").toggleClass('col-sm-11');
+
+
+            });*/
+
+            $("#menu ul li").hover(
+            	function(){
+            		$(this).find("hr").css("width", "100%");
+            	},function(){
+            		$(this).find("hr").css("width", "0%");
+            	}
+            );
+		</script>		
+	</body>
+</html>
