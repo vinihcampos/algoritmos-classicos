@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Grafos</title>
+
+        <!-- Bootstrap -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+       <link rel="stylesheet" href="../css/subject.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Lobster|Maven+Pro|Dancing+Script|Bangers|Lobster+Two|Bad+Script|Poiret+One|Antic|Rancho' rel='stylesheet' type='text/css'>
+
+      	<!-- Code listing-->
+      	<link rel="stylesheet" href="../styles/androidstudio.css">
+		<script type='text/javascript' src="../js/highlight.pack.js"></script>
+
+		<!-- Nice scroll-->
+		<script type="text/javascript" src="../js/smooth-scroll.js"></script>
+	</head>
+	<body class="container-fluid">
+		<section id = "side-bar" class = "row col-xs-12 col-sm-2" style="background: #E64A19;">
+			<div id = "topic" class="text-center">
+				<a href = "../index.html"><img src="../img/Graph
+				.png"/></a>
+				<h3>Grafos</h3>
+			</div>
+			<div id = "menu" class = "row col-xs">
+				<ul class = "col-xs-12">
+					<li>
+						<a data-scroll href = "#tad">Tipos Abstratos de Dados</a>
+						<hr/>
+					</li>
+					<li>
+						<a data-scroll href = "#Grafos">Grafos</a>
+						<hr/>
+					</li>
+					<li>
+						<a data-scroll href = "#app">Aplicações</a>
+						<hr/>
+					</li>
+					<li>
+						<a data-scroll href = "#percorrimento">Arestas e Rercorrimento</a>
+						<hr/>
+					</li>
+					<li>
+						<a data-scroll href = "#BFS">Busca em Largura(BFS)</a>
+						<hr/>
+					</li>
+					<li>
+						<a data-scroll href = "#DFS">Busca em Profundidade(DFS)</a>
+						<hr/>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section id = "content-aux" class="col-sm-2"></section>
+		<section id = "content" class = "row col-sm-10">
+			<div id = "tad">
+				<h1>Tipos Abstratos de Dados</h1>
+				<hr/>
+				Um problema clássico da Ciência da Computação é encontrar a sublísta contígua de soma máxima, ou o maior subarranjo, ou subvetor de soma máxima a partir de uma lista ou vetor de números.
+				<br/>
+				<br/>
+				No arranjo acima temos a soma máxima de //STUB começando na posição %d e terminando na posição  %d.
+				É importante notar que geralmente o problema envolve um conjunto de números inteiros, com elementos positivos e negativos, já que, se não houver números negativos, toda a lista é uma solução trivial para o problema.
+			</div>
+			<div id = "Grafos">
+				<h1>Grafos</h1>
+				<hr/>
+				1. simplified model for maximum likelihood estimation of patterns in digitized images.
+				<br/>
+				2. Maximum subarray problem adapted for manycore architectures
+				<br/>
+				https://www.quora.com/What-are-some-applications-of-maximum-subarray-problems
+
+			</div>
+			<div id = "app">
+			<h1>Aplicações</h1>
+				<hr/>
+			
+			</div>
+			<div id = "percorrimento">
+			<h1>Arestas e percorrimento</h1>
+				<hr/>
+				
+			</div>
+			<div id = "BFS">	
+			<h1>Busca em largura</h1>
+				<hr/>
+			<div/>
+			<div id = "DFS">	
+			<h1>Busca em profundidade</h1>
+				<hr/>
+			<div/>
+					
+		</section>
+
+		<script>
+			hljs.initHighlightingOnLoad();
+			smoothScroll.init();
+
+			/*$( "#side-bar #topic" ).click(function() {
+                $("#side-bar").toggleClass('col-sm-2');
+                $("#side-bar").toggleClass('col-sm-1');
+                $("#topic h3").fadeToggle("fast");
+
+                $("#content-aux").toggleClass('col-sm-2');
+                $("#content-aux").toggleClass('col-sm-1');
+                $("#content").toggleClass('col-sm-10');
+                $("#content").toggleClass('col-sm-11');
+
+
+            });*/
+
+            $("#menu ul li").hover(
+            	function(){
+            		$(this).find("hr").css("width", "100%");
+            	},function(){
+            		$(this).find("hr").css("width", "0%");
+            	}
+            );
+		</script>		
+	</body>
+</html>
