@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Backtracking</title>
+
+        <!-- Bootstrap -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+       <link rel="stylesheet" href="../css/subject.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Lobster|Maven+Pro|Dancing+Script|Bangers|Lobster+Two|Bad+Script|Poiret+One|Antic|Rancho' rel='stylesheet' type='text/css'>
+
+      	<!-- Code listing-->
+      	<link rel="stylesheet" href="../styles/androidstudio.css">
+		<script type='text/javascript' src="../js/highlight.pack.js"></script>
+
+		<!-- Nice scroll-->
+		<script type="text/javascript" src="../js/smooth-scroll.js"></script>
+	</head>
+	<body class="container-fluid">
+		<section id = "side-bar" class = "row col-xs-12 col-sm-2" style="background: #0097A7;">
+			<div id = "topic" class="text-center">
+				<a href = "../index.html"><img src="../img/back.gif"/></a>
+				<h3>Backtracking</h3>
+			</div>
+			<div id = "menu" class = "row col-xs">
+				<ul class = "col-xs-12">
+					<li>
+						<a data-scroll href = "#definicao">O que é backtracking?</a>
+						<hr/>
+					</li>
+                    <li>
+                        <a data-scroll href = "#referencias">Referências</a>
+                        <hr/>
+                    </li>
+				</ul>
+			</div>
+		</section>
+		<section id = "content-aux" class="col-sm-2"></section>
+		<section id = "content" class = "row col-sm-10">
+			<div id = "definicao">
+				<h1>O que é backtracking?</h1>
+				<hr/>
+				<p>Backtracking trata-se de uma estratégia elegante de se realizar buscas por força bruta, com o objetivo de solucionar problemas com um numero reduzido de amostras. Esse número de amostras é preciso ser pequeno, pois o backtracking gera todas as possíveis soluções do problema.</p>
+
+                <h3>Como se comporta a complexidade temporal desse problema?</h3>
+                <p>A complexidade desse problema pode variar bastante de acordo com o problema, por exemplo, imagine um lista com N elementos distintos e o problema pede que você mostre todas as possíveis permutações desses elementos, então o programa irá gerar <strong>N!</strong> elementos, tornando a complexidade do algoritmo em O(N!).</p>
+                <p>Imagine agora o Σ = {0,1} e a partir desse conjunto pede-se para gerar todos os números binários de tamanho <i>N</i>, então o algoritmo irá ter complexidade O(2^n).</p>
+			</div>
+            <div id = "referencias">
+                <h1>Referências</h1>
+                <hr/>
+                <ol>
+                    <li><a target="_blank" href="https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/">Binary Search</a></li>
+                    <li><a target="_blank" href="https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm">Data Structure and Algorithms Binary Search</a></li>
+                    <li><a target="_blank" href="https://www.weheartswift.com/binary-search-applications/"> Binary Search and Applications</a></li>
+                    <li><a target="_blank" href="https://www.quora.com/What-are-some-clever-applications-of-binary-search">What are some clever applications of binary search?</a></li>
+                </ol>
+            </div>			
+		</section>
+
+		<script>
+			hljs.initHighlightingOnLoad();
+			smoothScroll.init();
+
+			/*$( "#side-bar #topic" ).click(function() {
+                $("#side-bar").toggleClass('col-sm-2');
+                $("#side-bar").toggleClass('col-sm-1');
+                $("#topic h3").fadeToggle("fast");
+
+                $("#content-aux").toggleClass('col-sm-2');
+                $("#content-aux").toggleClass('col-sm-1');
+                $("#content").toggleClass('col-sm-10');
+                $("#content").toggleClass('col-sm-11');
+
+
+            });*/
+
+            $("#menu ul li").hover(
+            	function(){
+            		$(this).find("hr").css("width", "100%");
+            	},function(){
+            		$(this).find("hr").css("width", "0%");
+            	}
+            );
+		</script>		
+	</body>
+</html>
