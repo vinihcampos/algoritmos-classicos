@@ -84,11 +84,46 @@
 			<div id = "app">
 			<h1>Aplicações</h1>
 				<hr/>
-			
+				<p>Grafos estão em todos os lugares, existem diversas aplicações que podem ser modeladas com grafos.
+				Shortest Path
+				Geração automática de labirintos
+				graphs are used to represent networks of communication, data organization, computational devices, the flow of computation, etc. For instance, the link structure of a website can be represented by a directed graph, in which the vertices represent web pages and directed edges represent links from one page to another. A similar approach can be taken to problems in social media,[5] travel, biology, computer chip design, and many other fields.
+				Graph theory is also used to study molecules in chemistry and physics. In condensed matter physics, the three-dimensional structure of complicated simulated atomic structures can be studied quantitatively by gathering statistics on graph-theoretic properties related to the topology of the atoms. In chemistry a graph makes a natural model for a molecule, where vertices represent atoms and edges bonds.</p>
+
 			</div>
 			<div id = "BFS">	
 			<h1>Busca em largura</h1>
 				<hr/>
+
+<pre><code class="cpp">typedef struct{
+	char color = 'w';
+	vector<int> adj;
+	int father = -1;
+}node;
+
+void BFS(vector < node > &G, int n)
+{
+	G[n].color = 'g';
+	G[n].father = -1;
+	queue< int > q;
+	q.push(n);
+
+	while(!q.empty())
+	{
+		int u = q.front();
+		q.pop();
+		for(int i = 0; i < G[u].adj.size(); ++i)
+		{
+			if(G[G[u].adj[i]].color == 'w')
+			{
+				G[G[u].adj[i]].color = 'g';
+				q.push(G[u].adj[i]);
+				G[G[u].adj[i]].father = u;
+			}
+		}
+ 	}
+}
+</code></pre>
 			<div/>
 			<div id = "DFS">	
 			<h1>Busca em profundidade</h1>
