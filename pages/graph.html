@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Grafos</title>
+
+        <!-- Bootstrap -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+       <link rel="stylesheet" href="../css/subject.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Lobster|Maven+Pro|Dancing+Script|Bangers|Lobster+Two|Bad+Script|Poiret+One|Antic|Rancho' rel='stylesheet' type='text/css'>
+
+      	<!-- Code listing-->
+      	<link rel="stylesheet" href="../styles/androidstudio.css">
+		<script type='text/javascript' src="../js/highlight.pack.js"></script>
+
+		<!-- Nice scroll-->
+		<script type="text/javascript" src="../js/smooth-scroll.js"></script>
+	</head>
+	<body class="container-fluid">
+		<section id = "side-bar" class = "row col-xs-12 col-sm-2" style="background: #E64A19;">
+			<div id = "topic" class="text-center">
+				<a href = "../index.html"><img src="../img/Graph
+				.png"/></a>
+				<h3>Grafos</h3>
+			</div>
+			<div id = "menu" class = "row col-xs">
+				<ul class = "col-xs-12">
+					<li>
+						<a data-scroll href = "#Grafos">Grafos</a>
+						<hr/>
+					</li>
+					<li>
+						<a data-scroll href = "#percorrimento">Representação de Grafos</a>
+						<hr/>
+					</li>
+					<li>
+						<a data-scroll href = "#app">Aplicações</a>
+						<hr/>
+					</li>
+					<li>
+						<a data-scroll href = "#BFS">Busca em Largura(BFS)</a>
+						<hr/>
+					</li>
+					<li>
+						<a data-scroll href = "#DFS">Busca em Profundidade(DFS)</a>
+						<hr/>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section id = "content-aux" class="col-sm-2"></section>
+		<section id = "content" class = "row col-sm-10">
+			<div id = "Grafos">
+				<h1>Grafos</h1>
+				<hr/>
+				<p>Grafos são estruturas de dados difusas em Ciência da Computação, existem milhares de problemas computacionais que podem ser modelados utilizandos Grafos. Vale ressaltar que a teoria de grafos também é muito trabalhada na área de matemática, onde as áreas de pesquisa de computação e matemática se misturam, sendo assim, é muito comum encontar textos mais voltados para matermática que para computação relacionados a Grafos.
+				</p>
+				<h3>Mas o que é um Grafo?</h3>
+				<p> Um Grafo G = (V, E) é um conjunto de vértices V e um conjunto de arestas E (de <i>edges</i> em inglês) utilizados para representar entidades e suas relãões. Comumente é fácil encontrar representações visuais de grafos com "bolinhas e tracinhos", onde cada vértice representa uma entidade (pessoa, cidade, etc) e cada aresta que liga dois vértices representando a relação entre os vértices. Como exemplo, imagine o Facebook e cada pessoa como um vértice, as arestas entre os vértices podem representar as amizades explicitas na rede social. </p>
+				<p>O caso do Facebook representa bem um caso de grafos não-direcionados, onde cada aresta representa uma relação dos dois lados (se A é amigo de B, B é amigo de A), mas existem também os grafos dirigídos, onde uma relação é unidirecional, por exemplo, um grafo G, onde os vértices representam cidades e as arestas as estradas ligando-as, de modo que as estradas sejam de mão única.</p>
+			</div>
+			<div id = "percorrimento">
+			<h1>Representação de Grafos</h1>
+				<hr/>
+				<p>Existem dois métodos comumente utilizados para representar um grafo G = (V,E) computacionalmente, como uma coleção de listas de adjacência ou por meio de uma matriz de adjacência. Cada tipo de representação tem suas vantágens, normalmente, a representação por listas de adjacência são utilizadas para grafos esparços, ou seja, que possuem poucas arestas, podendo diminuir o tempo computacional de alguns algoritmos. A representação por matriz é geralmente utilizada para grafos densos, com muitas arestas, ou quando é necessário indentificar se existe uma aresta entre dois vértices.</p>
+			</div>
+			<div id = "app">
+			<h1>Aplicações</h1>
+				<hr/>
+				<p>Grafos estão em todos os lugares, existem diversas aplicações que podem ser modeladas com grafos. Uma aplicação clássica é a representação de redes de comunicação, communicação de aparelhos, fluxos elétricos,  fluxos hidráulicos. Geração de labirintos automaticamente para jogos, encontrar o menor caminho, como o Google Maps, simulação de moleculas químicas, todas essas aplicações podem ser modeladas utilizando a ideia de Grafos.
+			</div>
+			<div id = "BFS">	
+			<h1>Busca em largura</h1>
+				<hr/>
+				O Percorrimento em Largura, do inglês <i>Breadht-first Serach</i>, é um algoritmo de percorrimento em grafos que começa a partir de algum nó, chamado de nó raiz e explora os vizinhos, antes de seguir para o póximo nível de vizinhos.
+				O código abaixo mostra uma implementação para o BFS com uma representação dos nós como um struct e utiliza da representação da lista de adjacẽncia.
+<pre><code class="cpp">typedef struct{
+	char color = 'w';
+	vector<int> adj;
+	int father = -1;
+}node;
+
+void BFS(vector < node > &G, int n)
+{
+	G[n].color = 'g';
+	G[n].father = -1;
+	queue< int > q;
+	q.push(n);
+
+	while(!q.empty())
+	{
+		int u = q.front();
+		G[u].color = 'b';
+		q.pop();
+		for(int i = 0; i < G[u].adj.size(); ++i)
+		{
+			if(G[G[u].adj[i]].color == 'w')
+			{
+				G[G[u].adj[i]].color = 'g';
+				q.push(G[u].adj[i]);
+				G[G[u].adj[i]].father = u;
+			}
+		}
+ 	}
+}
+</code></pre>
+
+			<div/>
+			<div id = "DFS">	
+			<h1>Busca em profundidade</h1>
+				<hr/>
+			O percorrimento em profundidade, do inglês <i>Deep-First Search</i>, é um algortimo de perccorimento em grafos que explora o mais longe possível em cada ramo antes de buscar os vizinhos, de forma recursiva, onde para cada nó vizinho, explora-se recursivamente até o vizinho mais longe para depois retornar.
+			<div/>
+					
+		</section>
+
+		<script>
+			hljs.initHighlightingOnLoad();
+			smoothScroll.init();
+
+			/*$( "#side-bar #topic" ).click(function() {
+                $("#side-bar").toggleClass('col-sm-2');
+                $("#side-bar").toggleClass('col-sm-1');
+                $("#topic h3").fadeToggle("fast");
+
+                $("#content-aux").toggleClass('col-sm-2');
+                $("#content-aux").toggleClass('col-sm-1');
+                $("#content").toggleClass('col-sm-10');
+                $("#content").toggleClass('col-sm-11');
+
+
+            });*/
+
+            $("#menu ul li").hover(
+            	function(){
+            		$(this).find("hr").css("width", "100%");
+            	},function(){
+            		$(this).find("hr").css("width", "0%");
+            	}
+            );
+		</script>		
+	</body>
+</html>
