@@ -76,15 +76,15 @@
 				<p>Backtracking trata-se de uma estratégia elegante de se realizar buscas por força bruta, com o objetivo de solucionar problemas com um numero reduzido de amostras. Esse número de amostras é preciso ser pequeno, pois o backtracking gera todas as possíveis soluções do problema.</p>
 
                 <h3>Como se comporta a complexidade temporal desse problema?</h3>
-                <p>A complexidade desse problema pode variar bastante de acordo com o problema, por exemplo, imagine um lista com N elementos distintos e o problema pede que você mostre todas as possíveis permutações desses elementos, então o programa irá gerar <strong>N!</strong> elementos, tornando a complexidade do algoritmo em O(N!).</p>
+                <p>A complexidade pode variar bastante de acordo com o problema. Por exemplo, imagine um lista com N elementos distintos e o problema pede que você mostre todas as possíveis permutações desses elementos, então o programa irá gerar <strong>N!</strong> elementos, tornando a complexidade do algoritmo em O(N!).</p>
                 <p>Imagine agora o Σ = {0,1} e a partir desse conjunto pede-se para gerar todos os números binários de tamanho <i>N</i>, então o algoritmo irá ter complexidade O(2^n).</p>
 			</div>
             <div id = "funcionamento">
                 <h1>Pincípio de funcionamento</h1>                    
                 <hr/>
-                <p>O processo chave do backtracking é a recursão, pois a partir dela é possível avançar e retroceder ao final de cada recursão. Então, dado um conjunto de N elementos, a cada n-th utilizado na possível solução, ele é retirado dessa lista e por recursão continua-se o algoritmo, até que o conjunto fique vazio.</p>
+                <p>O processo chave do backtracking é a recursão, pois a partir dela é possível avançar e retroceder ao final de cada chamada recursiva. Então, dado um conjunto de N elementos, um i-ésimo elemento é utilizado na possível solução, então também é retirado dessa lista e por recursão continua-se o algoritmo, até que o conjunto fique vazio.</p>
                 <img src="../img/back.png">
-                <p>A imagem acima mostra o processo de recursão através de uma árvore, onde o conjunto se torna vazio quando não existe mais nós para se percorrer, pois nesse ponto é verificado se o estado atual é uma solução válida, entao a recursão desse momento é finalizada e continua-se por um caminho alternativo a partir do ponto anterior.</p>
+                <p>A imagem acima mostra o processo de recursão através de uma árvore de recursão, onde o conjunto se torna vazio quando não existe mais nós para se percorrer, pois nesse ponto é verificado se o estado atual é uma solução válida, entao a recursão neste momento é finalizada e continua-se por um caminho alternativo a partir do ponto anterior.</p>
 
                 <h3>Observações</h3>
                 <ul>
@@ -113,11 +113,11 @@ while(Problema não está resolvido)
                 <hr/>
 
                 <h3><a target = "_blank" href="https://pt.wikipedia.org/wiki/Problema_do_caixeiro-viajante">Caixeiro Viajante</a></h3>
-                <p>Quando deseja-se encontrar a menor rota para percorrer todas as cidades, passando apenas uma vez por cada cidade.</p>
+                <p>Quando deseja-se encontrar a menor rota para percorrer todas as cidades, passando apenas uma vez por cada uma delas.</p>
                 <h3><a target = "_blank" href="http://algorithms.tutorialhorizon.com/backtracking-knights-tour-problem/">Passeio do Cavalo</a></h3>
-                <p>Dado uma posição inicial de um cavalo em um tabuleiro de xadrez, deseja-se saber o maior caminho possível do cavalo pelo tabuleiro, de modo que ele respeite o seu tipo de movimentação e que passe apenas <strong>1 vez</strong> em cada posição.</p>
+                <p>Dado uma posição inicial de um cavalo em um tabuleiro de xadrez, deseja-se saber o maior caminho percorrido pelo cavalo no tabuleiro, de modo que ele respeite as regras do xadrez e que passe apenas <strong>1 vez</strong> em cada posição.</p>
                 <h3><a target = "_blank" href="http://algorithms.tutorialhorizon.com/backtracking-n-queens-problem/">Problema das N-Rainhas</a></h3>
-                <p>Dado uma tabuleiro de xadrez, de quais formas é possível posicionar N rainhas no tabuleiro sem que se acertem, já que a rainha no xadrez pode se mover na horizontal, vertical e diagonal.</p>
+                <p>Dado uma tabuleiro de xadrez, de quais formas é possível posicionar N rainhas no tabuleiro sem que se acertem? (já que a rainha no xadrez pode se mover na horizontal, vertical e diagonal).</p>
                 <h3><a target = "_blank" href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=515">Permutações de somas</a>  </h3>
                 <p>Dado um conjunto de números, quer saber-se de que formas é possível somar esses números para resultar em outro N definido.</p>
                 <h3><a target = "_blank" href="http://algorithms.tutorialhorizon.com/backtracking-rat-in-a-maze-puzzle/">Labirinto</a></h3>

@@ -110,3 +110,8 @@ a{
     -webkit-transition:.5s all ease;
 }
 
+h3 a,h3 a:hover, h3 a:visited, h3 a:active{
+	text-decoration: none;
+	outline: 0;
+}
+
