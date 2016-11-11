@@ -62,6 +62,10 @@
 						<a data-scroll href = "#DFS">Busca em Profundidade(DFS)</a>
 						<hr/>
 					</li>
+					<li>
+						<a data-scroll href = "#ref">Referências</a>
+						<hr/>
+					</li>
 				</ul>
 			</div>
 		</section>
@@ -94,13 +98,13 @@
 <pre><code class="cpp">typedef struct{
 	char color = 'w';
 	vector<int> adj;
-	int father = -1;
+	int dist = INT_MAX;
 }node;
 
 void BFS(vector < node > &G, int n)
 {
 	G[n].color = 'g';
-	G[n].father = -1;
+	G[n].dist = 0;
 	queue< int > q;
 	q.push(n);
 
@@ -114,21 +118,50 @@ void BFS(vector < node > &G, int n)
 			if(G[G[u].adj[i]].color == 'w')
 			{
 				G[G[u].adj[i]].color = 'g';
+				G[G[u].adj[i]].dist = G[u].dist + 1;
 				q.push(G[u].adj[i]);
-				G[G[u].adj[i]].father = u;
 			}
 		}
  	}
 }
 </code></pre>
+Para o algoritmo do BFS, é necessário utilizar uma uma estrutura de dados como uma fila, caso você não saiba o que é uma fila veja o link disponibilizado pela IME USP  sobre filas <a href="https://www.ime.usp.br/~pf/algoritmos/aulas/fila.html"> aqui</a>. 
 
+Para melhor visualização de como é executado o BFS, clique <a href="https://www.cs.usfca.edu/~galles/visualization/BFS.html">aqui</a>.
 			<div/>
 			<div id = "DFS">	
 			<h1>Busca em profundidade</h1>
 				<hr/>
 			O percorrimento em profundidade, do inglês <i>Deep-First Search</i>, é um algortimo de perccorimento em grafos que explora o mais longe possível em cada ramo antes de buscar os vizinhos, de forma recursiva, onde para cada nó vizinho, explora-se recursivamente até o vizinho mais longe para depois retornar.
 			<div/>
-					
+					<pre><code class="cpp">struct Graph{
+	vector<int> edges[1000];
+	bool visited[1000]; 
+};
+
+Graph g;
+
+void dfs(Graph & g, int index){
+	g.visited[index] = true;
+	for(int i = 0; i < g.edges[index].size(); ++i){
+		if(!g.visited[g.edges[index][i]]){
+			dfs(g, g.edges[index][i], count);
+		}
+	}
+}
+</code></pre>
+ Para a visualização do DFS, clique<a href="https://www.cs.usfca.edu/~galles/visualization/DFS.html">aqui</a>.
+
+ <div id ="ref" >
+ 	<h1>Referências</h1>
+		<hr/>
+		<ol>
+		<li>
+ 	[CLRS]  T.H. Cormen, C.E. Leiserson, R.L. Rivest, C. Stein,  Introduction to Algorithms, 2nd edition,  MIT Press & McGraw-Hill, 2001.   [Há uma edição em português (Editora Campus, 2001), mas a tradução é de má qualidade.]</li>
+ 	<li><a href="https://pt.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs">Curso do Khan Academy sobre Grafos</a></li>
+ 	<li><a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html">Visualização de Algoritmos</a></li>
+
+ </div>
 		</section>
 
 		<script>
