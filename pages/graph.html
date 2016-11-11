@@ -78,12 +78,15 @@
 				</p>
 				<h3>Mas o que é um Grafo?</h3>
 				<p> Um Grafo G = (V, E) é um conjunto de vértices V e um conjunto de arestas E (de <i>edges</i> em inglês) utilizados para representar entidades e suas relãões. Comumente é fácil encontrar representações visuais de grafos com "bolinhas e tracinhos", onde cada vértice representa uma entidade (pessoa, cidade, etc) e cada aresta que liga dois vértices representando a relação entre os vértices. Como exemplo, imagine o Facebook e cada pessoa como um vértice, as arestas entre os vértices podem representar as amizades explicitas na rede social. </p>
+				<center><img src="../img/undirected.jpeg"></center>
 				<p>O caso do Facebook representa bem um caso de grafos não-direcionados, onde cada aresta representa uma relação dos dois lados (se A é amigo de B, B é amigo de A), mas existem também os grafos dirigídos, onde uma relação é unidirecional, por exemplo, um grafo G, onde os vértices representam cidades e as arestas as estradas ligando-as, de modo que as estradas sejam de mão única.</p>
+				<center><img src="../img/directed.png" width="321" height="210"></center>
 			</div>
 			<div id = "percorrimento">
 			<h1>Representação de Grafos</h1>
 				<hr/>
 				<p>Existem dois métodos comumente utilizados para representar um grafo G = (V,E) computacionalmente, como uma coleção de listas de adjacência ou por meio de uma matriz de adjacência. Cada tipo de representação tem suas vantágens, normalmente, a representação por listas de adjacência são utilizadas para grafos esparços, ou seja, que possuem poucas arestas, podendo diminuir o tempo computacional de alguns algoritmos. A representação por matriz é geralmente utilizada para grafos densos, com muitas arestas, ou quando é necessário indentificar se existe uma aresta entre dois vértices.</p>
+				<center><img src="../img/gMatrix.png"></center>
 			</div>
 			<div id = "app">
 			<h1>Aplicações</h1>
@@ -93,8 +96,8 @@
 			<div id = "BFS">	
 			<h1>Busca em largura</h1>
 				<hr/>
-				O Percorrimento em Largura, do inglês <i>Breadht-first Serach</i>, é um algoritmo de percorrimento em grafos que começa a partir de algum nó, chamado de nó raiz e explora os vizinhos, antes de seguir para o póximo nível de vizinhos.
-				O código abaixo mostra uma implementação para o BFS com uma representação dos nós como um struct e utiliza da representação da lista de adjacẽncia.
+				<p>O Percorrimento em Largura, do inglês <i>Breadht-first Search</i>, é um algoritmo de percorrimento em grafos que começa a partir de algum nó, chamado de nó raiz e explora os vizinhos, antes de seguir para o póximo nível de vizinhos.
+				O código abaixo mostra uma implementação para o BFS com uma representação dos nós como um struct e utiliza da representação da lista de adjacẽncia.</p>
 <pre><code class="cpp">typedef struct{
 	char color = 'w';
 	vector<int> adj;
@@ -125,15 +128,15 @@ void BFS(vector < node > &G, int n)
  	}
 }
 </code></pre>
-Para o algoritmo do BFS, é necessário utilizar uma uma estrutura de dados como uma fila, caso você não saiba o que é uma fila veja o link disponibilizado pela IME USP  sobre filas <a href="https://www.ime.usp.br/~pf/algoritmos/aulas/fila.html"> aqui</a>. 
+<p>Para o algoritmo do BFS, é necessário utilizar uma uma estrutura de dados como uma fila, caso você não saiba o que é uma fila veja o link disponibilizado pela IME USP  sobre filas <a href="https://www.ime.usp.br/~pf/algoritmos/aulas/fila.html"> aqui</a>. 
 
 Para melhor visualização de como é executado o BFS, clique <a href="https://www.cs.usfca.edu/~galles/visualization/BFS.html">aqui</a>.
-			<div/>
+			</p><div/>
 			<div id = "DFS">	
 			<h1>Busca em profundidade</h1>
 				<hr/>
-			O percorrimento em profundidade, do inglês <i>Deep-First Search</i>, é um algortimo de perccorimento em grafos que explora o mais longe possível em cada ramo antes de buscar os vizinhos, de forma recursiva, onde para cada nó vizinho, explora-se recursivamente até o vizinho mais longe para depois retornar.
-			<div/>
+			<p>O percorrimento em profundidade, do inglês <i>Deep-First Search</i>, é um algortimo de perccorimento em grafos que explora o mais longe possível em cada ramo antes de buscar os vizinhos, de forma recursiva, onde para cada nó vizinho, explora-se recursivamente até o vizinho mais longe para depois retornar.
+			</p><div/>
 					<pre><code class="cpp">struct Graph{
 	vector<int> edges[1000];
 	bool visited[1000]; 
@@ -145,12 +148,12 @@ void dfs(Graph & g, int index){
 	g.visited[index] = true;
 	for(int i = 0; i < g.edges[index].size(); ++i){
 		if(!g.visited[g.edges[index][i]]){
-			dfs(g, g.edges[index][i], count);
+			dfs(g, g.edges[index][i]);
 		}
 	}
 }
 </code></pre>
- Para a visualização do DFS, clique<a href="https://www.cs.usfca.edu/~galles/visualization/DFS.html">aqui</a>.
+<p> Para a visualização do DFS, clique <a href="https://www.cs.usfca.edu/~galles/visualization/DFS.html">aqui</a>.</p>
 
  <div id ="ref" >
  	<h1>Referências</h1>
@@ -160,7 +163,7 @@ void dfs(Graph & g, int index){
  	[CLRS]  T.H. Cormen, C.E. Leiserson, R.L. Rivest, C. Stein,  Introduction to Algorithms, 2nd edition,  MIT Press & McGraw-Hill, 2001.   [Há uma edição em português (Editora Campus, 2001), mas a tradução é de má qualidade.]</li>
  	<li><a href="https://pt.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/describing-graphs">Curso do Khan Academy sobre Grafos</a></li>
  	<li><a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html">Visualização de Algoritmos</a></li>
- 	<li><a href=""></a></li>
+ 	<li><a href="https://www.ime.usp.br/~pf/algoritmos_para_grafos/">Algoritmos para Grafos em C</a></li>
  	</ol>
 
  </div>
