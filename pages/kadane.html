@@ -34,7 +34,7 @@
 		<script type="text/javascript" src="../js/smooth-scroll.js"></script>
 	</head>
 	<body class="container-fluid">
-		<section id = "side-bar" class = "row col-xs-12 col-sm-2" style="background: #E64A19;">
+		<section id = "side-bar" class = "row col-xs-12 col-sm-2" style="background: #00796B;">
 			<div id = "topic" class="text-center">
 				<a href = "../index.html"><img src="../img/K.png"/></a>
 				<h3>Kadane</h3>
@@ -138,6 +138,8 @@ return max_total;
 }
 </code></pre>
 	<p>O algoritmo de Kadane é centrado nas variáveis max_atual e max_total, onde o máximo temporário é atualizado  max_atual = max(max_atual + v[i], v[i]), e a soma máxima é atualizada de acordo com a o valor atual da variável e o valor atual do máximo temeporário max_total = max(max_total, max_atual)</p>
+	<h3>Por que usamos o algoritmo de Kadane?</h3>
+	<p>Pode-se perceber que o algoritmo de Kadane possui apenas um laço, e perccore o arranjo apenas uma vez, configurando um tempo assintótico de <i>O(N)</i>, se tornando um algoritmo mais eficiente que a solução intuitiva.</p>
 			</div>
 			<div id = "ref">	
 			<h1>Refrências</h1>
