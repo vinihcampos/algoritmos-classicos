@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -26,181 +26,181 @@
         <!-- Google fonts -->
         <link href='https://fonts.googleapis.com/css?family=Lobster|Maven+Pro|Dancing+Script|Bangers|Lobster+Two|Bad+Script|Poiret+One|Antic|Rancho' rel='stylesheet' type='text/css'>
 
-      	<!-- Code listing-->
-      	<link rel="stylesheet" href="../styles/androidstudio.css">
-		<script type='text/javascript' src="../js/highlight.pack.js"></script>
+          <!-- Code listing-->
+          <link rel="stylesheet" href="../styles/androidstudio.css">
+        <script type='text/javascript' src="../js/highlight.pack.js"></script>
 
-		<!-- Nice scroll-->
-		<script type="text/javascript" src="../js/smooth-scroll.js"></script>
-	</head>
-	<body class="container-fluid">
-		<section id = "side-bar" class = "row col-xs-12 col-sm-2" style="background: #E64A19;">
-			<div id = "topic" class="text-center">
-				<a href = "../index.html"><img src="../img/bb.png"/></a>
-				<h3>Busca Binária</h3>
-			</div>
-			<div id = "menu" class = "row col-xs">
-				<ul class = "col-xs-12">
-					<li>
-						<a data-scroll href = "#definicao">O que é busca binária?</a>
-						<hr/>
-					</li>
-					<li>
-						<a data-scroll href = "#aplicacao">Aplicações</a>
-						<hr/>
-					</li>
-					<li>
-						<a data-scroll href = "#principio">Princípio de funcionamento</a>
-						<hr/>
-					</li>
-					<li>
-						<a data-scroll href = "#codigo">Algoritmos</a>
-						<hr/>
-					</li>					
-					<li>
-						<a data-scroll href = "#exercicios">Exercícios</a>
-						<hr/>
-					</li>
-					<li>
-						<a data-scroll href = "#referencias">Referências</a>
-						<hr/>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<section id = "content-aux" class="col-sm-2"></section>
-		<section id = "content" class = "row col-sm-10">
-			<div id = "definicao">
-				<h1>O que é busca binária?</h1>
-				<hr/>
-				<p>É um dos algoritmos fundamentais da ciência da computação e é utilizado para realizar pesquisas em <strong>vetores ordenados</strong>. Tal algoritmo possui complexidade de tempo de execução igual a <i>Ο(log n)</i>.</p>
-				<h3>O que significa ser O(log n)?</h3>
-				<p>Ao se criar um algoritmo, um dos pontos a se verificar é a complexidade temporal do programa, pois a partir dela pode-se vericar a eficiência do algoritmo. De forma geral, a complexidade se baseia nos <i>loops</i> (estruturas de repetição) que o programa utiliza.</p>
-				<p>Um caso fácil para analisar é a impressão de todos os números de um vetor. Como o laço desse programa irá percorrer todos os elementos do vetor, então dizemos que esse loop executa <strong>n vezes</strong>. Como essa é a única estrutura de repetição do algoritmo, diz-se que o programa tem complexidade temporal de <i>O(n)</i>. Então, na busca binária, o laço do algoritmo sempre está trabalhando com um vetor de <strong>n/2</strong>, ou seja, a cada execução o vetor diminui seu tamanho em <strong>n/2</strong> e esse tipo de execução caracteriza-se pelo <strong>log n</strong>, então o algoritmo possui complexidade de <i>O(log n)</i>. Isso significa que a utilização da busca binária é melhor que usar uma busca linear, já que <i>O(log n) < O(n)</i>.</p>
-			</div>
-			<div id = "aplicacao">
-				<h1>Aplicações</h1>
-				<hr/>
-				<h3>Dicionário</h3>
-				<p>Quando deseja-se encontrar a definição de uma palavra ou termo.</p>
-				<h3>Agenda Telefônica</h3>
-				<p>Quando deseja-se encontrar o contato de uma pessoa.</p>
-				<h3>Campos Autocompletáveis</h3>
-				<p>Quando deseja-se encontrar as palavras que possuam prefixos em comum. Para uma melhor explicação visite <a href = "https://www.weheartswift.com/binary-search-applications/" target="_blank">We&#9829Swift</a>.</p>
-				<h3>Jogo Akinator</h3>
-				<p>O jogo consiste numa série de perguntas para adivinhar o que o usuário pensou.</p>
-				<h3>Jogo de Adivinhação</h3>
-				<p>Duas pessoas X e Y. X pensa em um número, estabelece um intervalo e Y tenta adivinhar esse número. A cada erro de Y, X diz se o valor que Y pensou é maior ou menor, então Y continua até acertar ou acabar as tentativas.</p>
+        <!-- Nice scroll-->
+        <script type="text/javascript" src="../js/smooth-scroll.js"></script>
+    </head>
+    <body class="container-fluid">
+        <section id = "side-bar" class = "row col-xs-12 col-sm-2" style="background: #E64A19;">
+            <div id = "topic" class="text-center">
+                <a href = "../index.html"><img src="../img/bb.png"/></a>
+                <h3>Busca Binária</h3>
+            </div>
+            <div id = "menu" class = "row col-xs">
+                <ul class = "col-xs-12">
+                    <li>
+                        <a data-scroll href = "#definicao">O que é busca binária?</a>
+                        <hr/>
+                    </li>
+                    <li>
+                        <a data-scroll href = "#aplicacao">Aplicações</a>
+                        <hr/>
+                    </li>
+                    <li>
+                        <a data-scroll href = "#principio">Princípio de funcionamento</a>
+                        <hr/>
+                    </li>
+                    <li>
+                        <a data-scroll href = "#codigo">Algoritmos</a>
+                        <hr/>
+                    </li>					
+                    <li>
+                        <a data-scroll href = "#exercicios">Exercícios</a>
+                        <hr/>
+                    </li>
+                    <li>
+                        <a data-scroll href = "#referencias">Referências</a>
+                        <hr/>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id = "content-aux" class="col-sm-2"></section>
+        <section id = "content" class = "row col-sm-10">
+            <div id = "definicao">
+                <h1>O que é busca binária?</h1>
+                <hr/>
+                <p>É um dos algoritmos fundamentais da ciência da computação e é utilizado para realizar pesquisas em <strong>vetores ordenados</strong>. Tal algoritmo possui complexidade de tempo de execução igual a <i>Ο(log n)</i>.</p>
+                <h3>O que significa ser O(log n)?</h3>
+                <p>Ao se criar um algoritmo, um dos pontos a se verificar é a complexidade temporal do programa, pois a partir dela pode-se vericar a eficiência do algoritmo. De forma geral, a complexidade se baseia nos <i>loops</i> (estruturas de repetição) que o programa utiliza.</p>
+                <p>Um caso fácil para analisar é a impressão de todos os números de um vetor. Como o laço desse programa irá percorrer todos os elementos do vetor, então dizemos que esse loop executa <strong>n vezes</strong>. Como essa é a única estrutura de repetição do algoritmo, diz-se que o programa tem complexidade temporal de <i>O(n)</i>. Então, na busca binária, o laço do algoritmo sempre está trabalhando com um vetor de <strong>n/2</strong>, ou seja, a cada execução o vetor diminui seu tamanho em <strong>n/2</strong> e esse tipo de execução caracteriza-se pelo <strong>log n</strong>, então o algoritmo possui complexidade de <i>O(log n)</i>. Isso significa que a utilização da busca binária é melhor que usar uma busca linear, já que <i>O(log n) < O(n)</i>.</p>
+            </div>
+            <div id = "aplicacao">
+                <h1>Aplicações</h1>
+                <hr/>
+                <h3>Dicionário</h3>
+                <p>Quando deseja-se encontrar a definição de uma palavra ou termo.</p>
+                <h3>Agenda Telefônica</h3>
+                <p>Quando deseja-se encontrar o contato de uma pessoa.</p>
+                <h3>Campos Autocompletáveis</h3>
+                <p>Quando deseja-se encontrar as palavras que possuam prefixos em comum. Para uma melhor explicação visite <a href = "https://www.weheartswift.com/binary-search-applications/" target="_blank">We&#9829Swift</a>.</p>
+                <h3>Jogo Akinator</h3>
+                <p>O jogo consiste numa série de perguntas para adivinhar o que o usuário pensou.</p>
+                <h3>Jogo de Adivinhação</h3>
+                <p>Duas pessoas X e Y. X pensa em um número, estabelece um intervalo e Y tenta adivinhar esse número. A cada erro de Y, X diz se o valor que Y pensou é maior ou menor, então Y continua até acertar ou acabar as tentativas.</p>
 
-				<p>Para mais aplicações, visite o <a target = "_blank" href = "https://www.quora.com/What-are-some-clever-applications-of-binary-search">Quora</a>.</p>
-			</div>	
-			<div id = "principio">
-				<h1>Princípio de funcionamento</h1>
-				<hr/>
-				<p>Tomemos o seguinte vetor como exemplo, onde desejamos encontrar o valor 31.</p>
-				<img src="../img/binary_search_0.jpg"/>
-				<p>Então, estabelecemos 3 índices: </p>
-				<ul>
-					<li>esquerdo = 0</li>
-					<li>direito = 9</li>
-					<li>meio = (direito + esquerdo) / 2 = 4</li>
-				</ul>
-				<p>O algoritmo sempre irá verificar o valor na posição <strong>meio</strong>, de modo que se o valor procurado estiver nessa posição, o algoritmo é finalizado, retornando o índice <strong>meio</strong>. Caso o valor na posição <strong>meio</strong> seja <strong>&gt;</strong> que o procurado, então <strong>direito</strong> = <strong>meio</strong> - 1, caso contrário, <strong>esquerdo</strong> = <strong>meio</strong> + 1. Então o algoritmo é executado até que o valor desejado seja encontrado, ou quando <strong>esquerdo</strong> > <strong>direito</strong>, neste caso o algoritmo retorna -1, já que não o valor desejado não está na lista. Continuando o exemplo acima, temos a seguinte situação:</p>
-				<img src="../img/binary_search_1.jpg"/>
-				<p>É comparada o valor desejado, 31, com o valor na posição 4, 27. Como vetor[<strong>meio</strong>] &lt; 31, então, <strong>esquerdo</strong> = <strong>meio</strong> + 1. Nesse momento, um novo <strong>meio</strong> é calculado, seguindo a mesma equação definida anteriormente, ficando com o valor 7.</p>
-				<img src="../img/binary_search_3.jpg"/>
-				<p>É repetido o mesmo processo anterior, onde compara-se o valor de vetor[<strong>meio</strong>] com 31, e nesse caso vetor[<strong>meio</strong>] > 31, então <strong>direito</strong> = <strong>meio</strong> - 1. Um novo <strong>meio</strong> é cálculado, ficando com valor 5.</p>
-				<img src="../img/binary_search_5.jpg"/>
-				<p>Nesse momento, ao fazer a comparação de vetor[<strong>meio</strong>] com 31, tem-se que vetor[<strong>meio</strong>] == 31, então o algoritmo retorna o valor 5 e finaliza o algoritmo.</p>
-			</div>
-			<div id = "codigo">
-				<h1>Algoritmos</h1>
-				<hr/>
-				<div class = "row col-sm-12">
+                <p>Para mais aplicações, visite o <a target = "_blank" href = "https://www.quora.com/What-are-some-clever-applications-of-binary-search">Quora</a>.</p>
+            </div>	
+            <div id = "principio">
+                <h1>Princípio de funcionamento</h1>
+                <hr/>
+                <p>Tomemos o seguinte vetor como exemplo, onde desejamos encontrar o valor 31.</p>
+                <img src="../img/binary_search_0.jpg"/>
+                <p>Então, estabelecemos 3 índices: </p>
+                <ul>
+                    <li>esquerdo = 0</li>
+                    <li>direito = 9</li>
+                    <li>meio = (direito + esquerdo) / 2 = 4</li>
+                </ul>
+                <p>O algoritmo sempre irá verificar o valor na posição <strong>meio</strong>, de modo que se o valor procurado estiver nessa posição, o algoritmo é finalizado, retornando o índice <strong>meio</strong>. Caso o valor na posição <strong>meio</strong> seja <strong>&gt;</strong> que o procurado, então <strong>direito</strong> = <strong>meio</strong> - 1, caso contrário, <strong>esquerdo</strong> = <strong>meio</strong> + 1. Então o algoritmo é executado até que o valor desejado seja encontrado, ou quando <strong>esquerdo</strong> > <strong>direito</strong>, neste caso o algoritmo retorna -1, já que não o valor desejado não está na lista. Continuando o exemplo acima, temos a seguinte situação:</p>
+                <img src="../img/binary_search_1.jpg"/>
+                <p>É comparada o valor desejado, 31, com o valor na posição 4, 27. Como vetor[<strong>meio</strong>] &lt; 31, então, <strong>esquerdo</strong> = <strong>meio</strong> + 1. Nesse momento, um novo <strong>meio</strong> é calculado, seguindo a mesma equação definida anteriormente, ficando com o valor 7.</p>
+                <img src="../img/binary_search_3.jpg"/>
+                <p>É repetido o mesmo processo anterior, onde compara-se o valor de vetor[<strong>meio</strong>] com 31, e nesse caso vetor[<strong>meio</strong>] > 31, então <strong>direito</strong> = <strong>meio</strong> - 1. Um novo <strong>meio</strong> é cálculado, ficando com valor 5.</p>
+                <img src="../img/binary_search_5.jpg"/>
+                <p>Nesse momento, ao fazer a comparação de vetor[<strong>meio</strong>] com 31, tem-se que vetor[<strong>meio</strong>] == 31, então o algoritmo retorna o valor 5 e finaliza o algoritmo.</p>
+            </div>
+            <div id = "codigo">
+                <h1>Algoritmos</h1>
+                <hr/>
+                <div class = "row col-sm-12">
 <pre><h3>Busca binária convencional</h3>
 <code class="cpp">int bb(int tamanho_vetor, int v[], int valor){
-	int esq = 0; // Índice esquerdo
-	int dir = tamanho_vetor - 1; // Índice direito
-	int meio; // Índice meio
-	while(esq &lt; dir){ // Condição de parada
-		meio = (esq + dir) / 2; // Cálculo do meio
-		if(v[meio] == valor) // Verifica se o v na posição meio é igual ao valor procurado
-			return meio; // Retorna a posição caso for encontrada
-		else if(v[meio] &gt; valor) // Caso v na posição meio seja diferente do valor procurado, verifica-se v nessa posição é maior que o valor.
-			dir = meio - 1; // Atualiza o valor do índice dir
-		else // Caso contrário
-			esq = meio + 1; // Atualiza o valor do índice esq
-	}
-	return -1; // Condição em que a busca falhou e o elemento não foi encontrado.
+    int esq = 0; // Índice esquerdo
+    int dir = tamanho_vetor - 1; // Índice direito
+    int meio; // Índice meio
+    while(esq &lt;= dir){ // Condição de parada
+        meio = (esq + dir) / 2; // Cálculo do meio
+        if(v[meio] == valor) // Verifica se o v na posição meio é igual ao valor procurado
+            return meio; // Retorna a posição caso for encontrada
+        else if(v[meio] &gt; valor) // Caso v na posição meio seja diferente do valor procurado, verifica-se v nessa posição é maior que o valor.
+            dir = meio - 1; // Atualiza o valor do índice dir
+        else // Caso contrário
+            esq = meio + 1; // Atualiza o valor do índice esq
+    }
+    return -1; // Condição em que a busca falhou e o elemento não foi encontrado.
 }</code></pre>
-				</div>
-				<div class = "row col-sm-12">
+                </div>
+                <div class = "row col-sm-12">
 <pre><h3>Busca binária - Retorna o primeiro elemento que seja maior ou igual que o valor</h3>
 <code class="cpp">int lowerBB(int tamanho_vetor, int v[], int valor){
-	int esq = 0; // Índice esquerdo
-	int dir = tamanho_vetor - 1; // Índice direito
-	int meio; // Índice meio
-	while(dir - esq &gt; 1){ // Condição de parada
-		meio = (esq + dir) / 2; // Cálculo do meio
-		if(v[meio] == valor) // Verifica se o v na posição meio é igual ao valor procurado
-			return meio; // Retorna a posição caso for encontrada
-		else if(v[meio] &gt; valor) // Caso v na posição meio seja diferente do valor procurado, verifica-se v nessa posição é maior que o valor.
-			dir = meio; // Atualiza o valor do índice dir
-		else // Caso contrário
-			esq = meio; // Atualiza o valor do índice esq
-	}
-	if(v[esq] &gt;= valor) return esq; //Caso v[esq] &gt;= valor, retorna-se esq
-	else if(v[dir] &gt;= valor) return dir; //Caso v[dir] &gt;= valor, retorna-se esq
-	else return -1; // Caso não exista algum elemento dentro de 'v' que seja maior que valor, retorna-se -1
+    int esq = 0; // Índice esquerdo
+    int dir = tamanho_vetor - 1; // Índice direito
+    int meio; // Índice meio
+    while(dir - esq &gt; 1){ // Condição de parada
+        meio = (esq + dir) / 2; // Cálculo do meio
+        if(v[meio] == valor) // Verifica se o v na posição meio é igual ao valor procurado
+            return meio; // Retorna a posição caso for encontrada
+        else if(v[meio] &gt; valor) // Caso v na posição meio seja diferente do valor procurado, verifica-se v nessa posição é maior que o valor.
+            dir = meio; // Atualiza o valor do índice dir
+        else // Caso contrário
+            esq = meio; // Atualiza o valor do índice esq
+    }
+    if(v[esq] &gt;= valor) return esq; //Caso v[esq] &gt;= valor, retorna-se esq
+    else if(v[dir] &gt;= valor) return dir; //Caso v[dir] &gt;= valor, retorna-se esq
+    else return -1; // Caso não exista algum elemento dentro de 'v' que seja maior que valor, retorna-se -1
 }</code></pre>
-				</div>
-				<div class = "row col-sm-12">
+                </div>
+                <div class = "row col-sm-12">
 <pre><h3>Busca binária - Retorna o ultimo elemento que seja menor ou igual que o valor</h3>
 <code class="cpp">int upperBB(int tamanho_vetor, int v[], int valor){
-	int esq = 0; // Índice esquerdo
-	int dir = tamanho_vetor - 1; // Índice direito
-	int meio; // Índice meio
-	while(dir - esq &gt; 1){ // Condição de parada
-		meio = (esq + dir) / 2; // Cálculo do meio
-		if(v[meio] == valor) // Verifica se o v na posição meio é igual ao valor procurado
-			return meio; // Retorna a posição caso for encontrada
-		else if(v[meio] &gt; valor) // Caso v na posição meio seja diferente do valor procurado, verifica-se v nessa posição é maior que o valor.
-			dir = meio; // Atualiza o valor do índice dir
-		else // Caso contrário
-			esq = meio; // Atualiza o valor do índice esq
-	}
+    int esq = 0; // Índice esquerdo
+    int dir = tamanho_vetor - 1; // Índice direito
+    int meio; // Índice meio
+    while(dir - esq &gt; 1){ // Condição de parada
+        meio = (esq + dir) / 2; // Cálculo do meio
+        if(v[meio] == valor) // Verifica se o v na posição meio é igual ao valor procurado
+            return meio; // Retorna a posição caso for encontrada
+        else if(v[meio] &gt; valor) // Caso v na posição meio seja diferente do valor procurado, verifica-se v nessa posição é maior que o valor.
+            dir = meio; // Atualiza o valor do índice dir
+        else // Caso contrário
+            esq = meio; // Atualiza o valor do índice esq
+    }
 
-	if(v[dir] &lt;= valor) return dir; //Caso v[dir] &lt;= valor, retorna-se dir
-	else if(v[esq] &lt;= valor) return esq; //Caso v[esq] &lt;= valor, retorna-se esq
-	else return -1; // Caso não exista algum elemento dentro de 'v' que seja menor que valor, retorna-se -1
+    if(v[dir] &lt;= valor) return dir; //Caso v[dir] &lt;= valor, retorna-se dir
+    else if(v[esq] &lt;= valor) return esq; //Caso v[esq] &lt;= valor, retorna-se esq
+    else return -1; // Caso não exista algum elemento dentro de 'v' que seja menor que valor, retorna-se -1
 }</code></pre>
-				</div>
-			</div>
-			<div id = "exercicios" class = "col-sm-12">
-				<h1>Exercícios</h1>
-				<hr/>
+                </div>
+            </div>
+            <div id = "exercicios" class = "col-sm-12">
+                <h1>Exercícios</h1>
+                <hr/>
 
-				<h3><a target = "_blank" href="https://www.urionlinejudge.com.br/judge/en/problems/view/1912">Ajude Seu Madruga - URI 1912</a></h3>
-				<h3><a target = "_blank" href="http://olimpiada.ic.unicamp.br/pratique/programacao/nivel2/2008f1p2_ogros">Ogros - OBI 2008</a></h3>
+                <h3><a target = "_blank" href="https://www.urionlinejudge.com.br/judge/en/problems/view/1912">Ajude Seu Madruga - URI 1912</a></h3>
+                <h3><a target = "_blank" href="http://olimpiada.ic.unicamp.br/pratique/programacao/nivel2/2008f1p2_ogros">Ogros - OBI 2008</a></h3>
 
-			</div>
-			<div id = "referencias" class = "col-sm-12">
-				<h1>Referências</h1>
-				<hr/>
-				<ol>
-					<li><a target="_blank" href="https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/">Binary Search</a></li>
-					<li><a target="_blank" href="https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm">Data Structure and Algorithms Binary Search</a></li>
-					<li><a target="_blank" href="https://www.weheartswift.com/binary-search-applications/"> Binary Search and Applications</a></li>
-					<li><a target="_blank" href="https://www.quora.com/What-are-some-clever-applications-of-binary-search">What are some clever applications of binary search?</a></li>
-				</ol>
-			</div>		
-		</section>
+            </div>
+            <div id = "referencias" class = "col-sm-12">
+                <h1>Referências</h1>
+                <hr/>
+                <ol>
+                    <li><a target="_blank" href="https://www.topcoder.com/community/data-science/data-science-tutorials/binary-search/">Binary Search</a></li>
+                    <li><a target="_blank" href="https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm">Data Structure and Algorithms Binary Search</a></li>
+                    <li><a target="_blank" href="https://www.weheartswift.com/binary-search-applications/"> Binary Search and Applications</a></li>
+                    <li><a target="_blank" href="https://www.quora.com/What-are-some-clever-applications-of-binary-search">What are some clever applications of binary search?</a></li>
+                </ol>
+            </div>		
+        </section>
 
-		<script>
-			hljs.initHighlightingOnLoad();
-			smoothScroll.init();
+        <script>
+            hljs.initHighlightingOnLoad();
+            smoothScroll.init();
 
-			/*$( "#side-bar #topic" ).click(function() {
+            /*$( "#side-bar #topic" ).click(function() {
                 $("#side-bar").toggleClass('col-sm-2');
                 $("#side-bar").toggleClass('col-sm-1');
                 $("#topic h3").fadeToggle("fast");
@@ -214,12 +214,12 @@
             });*/
 
             $("#menu ul li").hover(
-            	function(){
-            		$(this).find("hr").css("width", "100%");
-            	},function(){
-            		$(this).find("hr").css("width", "0%");
-            	}
+                function(){
+                    $(this).find("hr").css("width", "100%");
+                },function(){
+                    $(this).find("hr").css("width", "0%");
+                }
             );
-		</script>		
-	</body>
+        </script>		
+    </body>
 </html>
